@@ -4,7 +4,7 @@
 
 | Uger | Dato | Emne | Indhold | Underviser |
 | --- | --- | --- | --- | --- |
-| 1 |  | [Javascript 1 ]()| ES6, Callback, Writing functions that use callbacks | THA |
+| 1 |  | [Javascript 1 ](week1_js/README.md)| ES6, Callback, Writing functions that use callbacks | THA |
 | 2 |  | Javascript 2 | Promises (lave egne promises), EventLoop, Async await | JORG |
 | 3 |  | Typescript 1 | transpiler, autotranspile, tsconfig, type, interface, class | THA |
 | 4 |  | Typescript 2 |  | THA |
