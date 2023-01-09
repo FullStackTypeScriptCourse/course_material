@@ -7,6 +7,53 @@
 - Understand how to write functions that take functions as arguments
   - in a useful way
 
+## How to prepare before class
+
+1. See video on [callbacks: **6.43**](https://www.youtube.com/watch?v=kz_vwAF4NHI&ab_channel=JamesQQuick)
+2. See video on [eventloop: **7.19**](https://www.youtube.com/watch?v=lqLSNG_79lI&ab_channel=JamesQQuick)
+
+## Class Exercise 1
+
+Look at the following javascript code: 
+```js 
+function greeting(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name:');
+  callback(name);
+}
+
+processUserInput(greeting);
+````
+1. Look at the code above and try to explain what the code does.
+2. Run the processUserInput function with a different callback (use lambda here) to console.log the name in uppercase.
+3. Run the processUserInput function with a different callback (use lambda here) to console.log the length of the name
+
+## Class Exercise 2
+
+Look at the following javascript code: 
+```js
+function add(x, y) {
+  return x + y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+function operateOnNumbers(operator, x, y) {
+  return operator(x, y);
+}
+
+console.log(operateOnNumbers(add, 3, 4));   // 7
+console.log(operateOnNumbers(multiply, 3, 4));   // 12
+````
+1. Look at the code above and try to explain what the code does.
+2. Run the operateOnNumbers function with a different operator (use lambda here) to subtract the numbers.
+3. Based on above code example write a function that takes two functions and an array of numbers, and returns an array with the result of applying each function to each number in the array. E.g. lift to the power of 2 and then divide by 10 or something like that.
+
 ### What is a callback?
 
 A callback is a function that is passed as an argument to another function. The function that takes the callback is called the "higher order function". The callback is called by the higher order function.
