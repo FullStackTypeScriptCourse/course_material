@@ -1,7 +1,6 @@
-# Week 5: Semester project part 1
+# Week 5: Semester project part 1: React and Typescript
 
 ## Objectives
-
 - Deepen your understanding of typescript and react
 - Create the first part of your semester project
 - Get more routine working with the different react ojbect types
@@ -66,6 +65,7 @@ const Person: React.FC<Person> = ({ firstName, lastName, age }) => {
 ## Exercise 4 - Create a json server backend
 
 - Using a json server (installed in the root of the project). Create a backend that can be used to store the people data.
+- Use the backend to store the people data.
 - Add another property to Person: Address with the following properties: street, city, zipCode, country.
 - Add functionality to add, update and delete addresses for a person.
 - All the time using typescript and not using the `any type` (since it circumvents the whole purpose of using typescript).
@@ -73,7 +73,7 @@ const Person: React.FC<Person> = ({ firstName, lastName, age }) => {
 ## Hand in
 Hand in before next class session by uploading your solution to github and fill out this google [form](https://forms.gle/Yzhcp7raAw3d2J53A) with your details.
 The github repo must contain the following:
-1. README.md file in project root descriping your project.
+1. README.md file in project root describing your project.
 2. A folder called `src` containing all your source code.
 3. All the necessary files and folders created by vite to install and run the project.
 
