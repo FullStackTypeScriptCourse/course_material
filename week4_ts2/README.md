@@ -1,19 +1,34 @@
 # Week 4: Typescript 2 setup react project
 
 ## Objectives
-
 - Understand how to setup a react project with typescript using vite
 - Understand how to run a react project with typescript
 - Get a bit of routine working with the different react ojbect types
+- Understand how to use typescript with react hooks
+- Understand how to use typescript with react state as props
 
 ## How to prepare before class
 
-
 ## Class Exercise 1
+1. Start a new react project with typescript using vite: `npm init vite@latest my_react_ts_app -- --template react-ts`
+2. Run the project: `npm run dev`
+3. Open the project in your editor and open the `App.tsx` file.
+4. Change the text in the `App.tsx` file to something else.
+5. Save the file and see the changes in the browser.
+6. Open the `App.tsx` file again and change the to render a Person component, that can show details about a person based on the props that you pass to it. Let a person have the following properties:
+  - name: string
+  - age: number
+  - email: string
 
 ## Class Exercise 2
+1. Find your old *lifting state up* code like e.g. the [temperature converter app](https://github.com/HartmannDemoCode/converter_demo2023.git)
+2. Create a new react typescript project with vite
+3. Copy the old code into the new project and make sure it works as js
+4. Convert the code to typescript using [these 7 steps](https://www.sitepoint.com/how-to-migrate-a-react-app-to-typescript/)
+5. Make sure the code works as typescript
 
-## Topic 1:
+
+## Topic 2: 
 
 ### Getting started
 `npm init vite@latest my_react_ts_app -- --template react-ts`
@@ -22,12 +37,12 @@
 - To write the component props, you need to specify what properties you are accepting on the component, the type, and if it is required or not using the `?` operator.
 
 ```typescript
-type PlatformLinkProps = {
+type Person = {
   name: string
-  url?: string
+  age?: number
 }
 
-export default function PlatformLink({ name, url }: PlatformLinkProps) {
+export default function PersonDisplay({ name, age }: Person) {
   // component code here.
 }
 ```
@@ -94,7 +109,7 @@ export default function myFunc() {
 }
 ```
 
-### state as props
+### State as props
 One of the more cumbersome parts of React is passing state around. In React, you can pass state as props to other components. This is a bit cumbersome, because you have to pass the state and the setter method for that state to the component, and specify the type of the state.
 ```typescript
 type PersonProps = {

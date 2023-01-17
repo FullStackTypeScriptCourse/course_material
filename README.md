@@ -28,3 +28,9 @@
 ## Important !!
 
 The classes on 09/02 and 09/03 will take place on Thursdays. Both days are a workshop that takes place in room 3.12.
+
+## Hand-in and Exam.
+1. Create a github repo for all your work in this course and link to it [here](https://docs.google.com/spreadsheets/d/1IKFYbYwqUlZ0sUaFcLaxl154NgoaRl0g57yY6k3ipo0/edit?usp=sharing)
+2. The repo should contain a folder for each week. Each folder should contain a README.md file with the answers to the exercises.
+3. There should also be a folder for the semester project which you will work on gradually over the course.
+4. All your code in the repo will be used for the exam.
