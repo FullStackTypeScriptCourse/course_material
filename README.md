@@ -16,8 +16,8 @@
 | 8 | 22/03/2023 | Mongo/Mongoose |  | JORG |
 | 9 | 29/03/2023 | [GraphQL](week9_graphql/README.md) |  | THA |
 | 10 | 05/04/2023  | Projekt 2 | Backend project | JORG/THA |
-| 11 | 12/04/2023 | React 1 | State management | THA |
-| 12 | 19/04/2023 | React 2 | Hooks (lav egne hooks). Recap | THA  |
+| 11 | 12/04/2023 | [React 1](week11_state_management/README.md) | State management | THA |
+| 12 | 19/04/2023 | [React 2](week12_react_hooks/README.md) | Hooks (lav egne hooks). Recap | THA  |
 | 13 | 26/04/2023 | [React 3](week13_graphql2/README.md) (Frontend GraphQL) | Libraries for  | THA |
 | 14 | 03/05/2023 | Projekt 3 |  | JORG/THA |
 | 15 | 10/05/2023 | Projekt 4 |  | JORG/THA |
