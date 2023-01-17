@@ -6,8 +6,8 @@
 
 | Week | Date | Subject | Content | Teacher |
 | --- | --- | --- | --- | --- |
-| 1 | 01/02/2023 | [Javascript 1 ](week1_js/README.md)| ES6 recap, Callback, Writing functions that use callbacks | JORG |
-| 2 | **09/02/2023** | Javascript 2 | Asynchronous javascript with Promises (lave egne promises), Async await | JORG |
+| 1 | 01/02/2023 | [Javascript 1 ](week1_js/RECAP_CALLBACKS.md)| ES6 recap, Callback, Writing functions that use callbacks | JORG |
+| 2 | **09/02/2023** | [Javascript 2]() | Asynchronous javascript with Promises (lave egne promises), Async await | JORG |
 | 3 | 15/02/2023 | [Typescript 1](week3_ts/README.md) | transpiler, autotranspile, tsconfig, type, interface, class | THA |
 | 4 | 22/02/2023 | [Typescript 2](week4_ts2/README.md) | Using typescript in a react project | THA |
 | 5 | 01/03/2023 | Group Project 1 | Define Project. Write API documentation, Frontend Mockup (Figma). | JORG/THA |
