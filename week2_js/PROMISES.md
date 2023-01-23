@@ -1,4 +1,54 @@
-### PROMISES
+# Week 2: PROMISES AND ASYNC/AWAIT (CALLBACK RECAP)
+
+
+## Objectives
+
+- Understand what a promise is
+- Understand how to use promises
+- Understand how to use async/await
+- Understand how to use callbacks
+
+## How to prepare before class
+
+1. Go to [https://www.youtube.com/watch?v=2d7s3spWAzo](https://www.youtube.com/watch?v=2d7s3spWAzo) and watch the video
+   about promises
+2. Go to [https://www.youtube.com/watch?v=568g8hxJJp4](https://www.youtube.com/watch?v=568g8hxJJp4) and watch the video
+   about async/await
+3. Create an API KEY on [openweathermap.org](https://openweathermap.org/)
+
+### What is promises in JavaScript?
+
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it's not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. 
+Promise users can attach callbacks to handle the fulfilled value or the reason for rejection. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise 
+to supply the value at some point in the future. 
+
+### How to use promises
+
+A promise is created using the new Promise constructor function. This function takes a single argument, a callback with two parameters, resolve and reject. 
+Do something within the callback, perhaps asynchronously, then call resolve if everything worked, otherwise call reject.
+
+
+### How to use async/await
+
+Async functions are a new feature in ES2017 that allow you to write asynchronous code in a synchronous way.
+Async functions are functions that return a Promise. They can be written in a more concise way than a promise.
+
+### How to use callbacks
+
+A callback is a function that is to be executed after another function has finished executing-hence the name ‘call back’.
+
+### Why do we need promises?
+
+Promises are a way to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple 
+asynchronous operations where callbacks can create callback hell leading to unmanageable code. 
+
+### What is callback hell?
+
+Callback hell is a problem with asynchronous code. It is a situation where you have a series of functions that call each other, 
+where each function is dependent on the previous function’s result. This can lead to a lot of nested callbacks, which makes
+the code hard to read and maintain. 
+
+### Class Exercises 1
 
 1) Let's start with a simple callback example to warm up:
 
@@ -24,7 +74,9 @@ Let's add some more operations by adding some more functions:
 
 call the function calculate with the appropriate parameters to test your code.
 
-3) Great!! Now that we are warmed up, let's try to make a litte weather app that will get the user's location and then
+### Class Exercises 2
+
+Great!! Now that we are warmed up, let's try to make a litte weather app that will get the user's location and then
    get the
    weather for that location
 
@@ -123,7 +175,7 @@ async function getWeather() {
 }
 ```
 
-4) Weather APP
+### Class Exercises 4 Weather APP
 
 - a) Now that you have the weather, you can display it to the user. Create a new file called index.html and add the
    following code:
