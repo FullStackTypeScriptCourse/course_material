@@ -59,7 +59,7 @@ function getLocation(callback) {
 
  - Now we need to get the weather for that location:
 
-**Go to [openweathermap.org](openweathermap.org) and create an account to get an API key**
+**Go to [openweathermap.org](https://openweathermap.org/) and create an account to get an API key**
 
 ```JS
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
