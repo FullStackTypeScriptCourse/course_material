@@ -1,4 +1,4 @@
-### CALLBACK & PROMISES
+### PROMISES
 
 1) Let's start with a simple callback example to warm up:
 
