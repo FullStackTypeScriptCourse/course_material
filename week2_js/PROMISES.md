@@ -111,8 +111,7 @@ The getWeather function you need to create yourself.
 
 - f) Now call both functions and log the weather to the console using the .then() and .catch() methods.
 
-- g) Now I want you to make the code even more readable by using async/await. You can use the following code as a
-   starting point:
+- g) Now I want you to make the code even more readable by using async/await. You can use the following code as a starting point:
 
 ```JS
 async function getWeather() {
@@ -150,7 +149,6 @@ async function getWeather() {
 document.getElementById('weather').innerHTML = weather.main.temp;
 ```
 
-
 - c) Now run the following command to start a local server:
 
 ```BASH 
@@ -164,7 +162,7 @@ npm start
 You may get an error message in your browser console saying that require is not defined. Why do you think that is ??
 Think about it for a minute and then read on.
 
-
+***
 
 The problem that arises here is that the browser doesn't know what require is. To fix this you need to change the following to the weather.js file:
 

@@ -7,7 +7,7 @@
 | Week | Date | Subject | Content | Teacher |
 | --- | --- | --- | --- | --- |
 | 1 | 01/02/2023 | [Part 1 ](week1_js/RECAP_CALLBACKS.md) && [Part 2 ](week1_js/RECAP_ES6.md) | ES6 recap, Callback, Writing functions that use callbacks | JORG |
-| 2 | **09/02/2023** | [Javascript 2]() | Asynchronous javascript with Promises (lave egne promises), Async await | JORG |
+| 2 | **09/02/2023** | [Javascript 2](week2_js/PROMISES.js) | Asynchronous javascript with Promises (lave egne promises), Async await | JORG |
 | 3 | 15/02/2023 | [Typescript 1](week3_ts/README.md) | transpiler, autotranspile, tsconfig, type, interface, class | THA |
 | 4 | 22/02/2023 | [Typescript 2](week4_ts2/README.md) | Using typescript in a react project | THA |
 | 5 | 01/03/2023 | Group Project 1 | Define Project. Write API documentation, Frontend Mockup (Figma). | JORG/THA |
@@ -30,7 +30,7 @@
 The classes on 09/02 and 09/03 will take place on Thursdays. Both days are a workshop that takes place in room 3.12.
 
 ## Hand-in and Exam.
-1. Create a github repo for all your work in this course and link to it [here](https://docs.google.com/spreadsheets/d/1IKFYbYwqUlZ0sUaFcLaxl154NgoaRl0g57yY6k3ipo0/edit?usp=sharing)
+1. Create a GitHub repo for all your work in this course and link to it [here](https://docs.google.com/spreadsheets/d/1IKFYbYwqUlZ0sUaFcLaxl154NgoaRl0g57yY6k3ipo0/edit?usp=sharing)
 2. The repo should contain a folder for each week. Each folder should contain a README.md file with the answers to the exercises.
 3. There should also be a folder for the semester project which you will work on gradually over the course.
 4. All your code in the repo will be used for the exam.
