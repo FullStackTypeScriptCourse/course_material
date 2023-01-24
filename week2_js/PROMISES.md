@@ -15,13 +15,32 @@
 2. Go to [https://www.youtube.com/watch?v=568g8hxJJp4](https://www.youtube.com/watch?v=568g8hxJJp4) and watch the video
    about async/await
 3. Create an API KEY on [openweathermap.org](https://openweathermap.org/) **!!!--IMPORTANT--!!!**
-4. Read [differences-between-nodejs-and-the-browser](https://nodejs.dev/en/learn/differences-between-nodejs-and-the-browser/)
+4. Read the [differences-between-nodejs-and-the-browser](https://nodejs.dev/en/learn/differences-between-nodejs-and-the-browser/)
 
 ### What is promises in JavaScript?
 
 A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it's not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. 
 Promise users can attach callbacks to handle the fulfilled value or the reason for rejection. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise 
 to supply the value at some point in the future. 
+
+### Promise Instantiation
+
+```JS
+const promise = new Promise((resolve, reject) => {
+   /*
+     Your code logic goes here and you call  resolve(value)
+     or reject(error) to resolve or reject the promise
+   */ 
+})
+
+promise.then((value) => {
+   // Code logic on success of an operation
+}).catch(error => {
+  // Code logic on failure of an operation
+}).finally(() => {
+  // Code logic to be executed after completion of operation
+})
+```
 
 ### How to use promises
 
@@ -49,23 +68,34 @@ Callback hell is a problem with asynchronous code. It is a situation where you h
 where each function is dependent on the previous function’s result. This can lead to a lot of nested callbacks, which makes
 the code hard to read and maintain. 
 
+### What is the difference between a promise and a callback? SUMMARY!
+
+Callbacks are a way to handle asynchronous operations in JavaScript. They are easy to manage when dealing with a single 
+asynchronous operation. However, they can create callback hell leading to unmanageable code. Promises are a way to handle
+asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where
+callbacks can create callback hell leading to unmanageable code.
+
+
+### Exercises
+
+- [Class Exercises 1](#class-exercises-1)
+- [Class Exercises 2](#class-exercises-2-implement-your-own-promises)
+- [Class Exercises 3](#class-exercises-3)
+- [Class Exercises 4](#class-exercises-4-weather-app)
+
+- a) open your favorite code editor and create a new folder javascriptWeek2
+
 ### Class Exercises 1
 
-1) Let's start with a simple callback example to warm up:
+Let's start with a simple callback example to warm up:
 
-```JS
-function calculate(x, y, operation) {
-    return operation(x, y);
-}
-```
+- a) Create a new folder called callbacks and create a new file called callbacks.js
+- b) Create a function called calculate that takes 3 parameters: x, y and a callback called operation
+- c) Create another function called add that takes 2 parameters: x and y and returns the sum of x and y
+- d) The calculate function should return the result of the operation function
+- e) Call the calculate function with the appropriate parameters to test your code
 
-```JS
-function add(x, y) {
-    return x + y;
-}
-```
-
-The above function is our overall calculator. Right now it only supports addition, that makes that calculator pretty
+Right now our calculator only supports addition, that makes that calculator pretty
 useless.
 Let's add some more operations by adding some more functions:
 
@@ -73,13 +103,30 @@ Let's add some more operations by adding some more functions:
     - multiplication
     - division
 
-call the function calculate with the appropriate parameters to test your code.
+- f) call the function calculate with the appropriate parameters to test your code.
 
-### Class Exercises 2
+### Class Exercises 2 Implement your own Promises
+
+- a) Create a new folder called promises and create a new file called promises.js
+   
+     The above calculator exercise was a good warm up, but we can do better.
+     Let's create our own promise that will do the same thing as the calculate function
+     from the previous exercise.
+
+- b) Change the calculate function to return a promise instead of a value and call the
+     appropriate resolve or reject function depending on the result of the operation function call.
+     Make sure to reject the promise if the operation function throws an error like divide by zero!
+- c) Call the new calculate function with the appropriate parameters to test your code.
+- d) Now try to chain add, subtract, divide and multiply using the .then syntax to the new calculator functions that returns a promise. 
+     How is that possible?? Explain!! 
+- e) Change the calculate function to use the async/await syntax instead of promises
+
+
+
+### Class Exercises 3
 
 Great!! Now that we are warmed up, let's try to make a litte weather app that will get the user's location and then
-   get the
-   weather for that location
+   get the weather for that location
 
 - a) Create a new folder called weather-app and create a new file called weather.js
 
@@ -273,6 +320,8 @@ document.getElementById('weather').innerHTML = weather.main.temp + ' ' + weather
 ```
 
 Feel free to add more functionality to the app. For example, you can add a background image that changes depending on the weather.
+
+
 
 
 
