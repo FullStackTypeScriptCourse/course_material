@@ -14,7 +14,8 @@
    about promises
 2. Go to [https://www.youtube.com/watch?v=568g8hxJJp4](https://www.youtube.com/watch?v=568g8hxJJp4) and watch the video
    about async/await
-3. Create an API KEY on [openweathermap.org](https://openweathermap.org/)
+3. Create an API KEY on [openweathermap.org](https://openweathermap.org/) **!!!--IMPORTANT--!!!**
+4. Read [differences-between-nodejs-and-the-browser](https://nodejs.dev/en/learn/differences-between-nodejs-and-the-browser/)
 
 ### What is promises in JavaScript?
 
@@ -104,28 +105,26 @@ const navigator = new Navigator();
 
 function getLocation(callback) {
     navigator.geolocation.getCurrentPosition(function (position) {
-        callback(position.coords);
+        callback(position);
     });
 }
 ```
 
  - Now we need to get the weather for that location:
 
-**Go to [openweathermap.org](https://openweathermap.org/) and create an account to get an API key**
-
 ```JS
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 function getWeather(coords, callback) {
     const apiKey = "YOUR KEY HERE";
-    var url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + coords.latitude + '&lon=' + coords.longitude + '&apiKey=' + apiKey
-    var req = new XMLHttpRequest();
+    const url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + coords.latitude + '&lon=' + coords.longitude + '&apiKey=' + apiKey
+    const req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = function () {
         if (req.status == 200) {
-            callback(JSON.parse(req.response));
+            callback(JSON.parse(req.responseText));
         } else {
-            callback('Error');
+            callback(new Error(req.statusText));
         }
     };
     req.send();
@@ -212,11 +211,12 @@ npm start
 ## WARNING:
 
 You may get an error message in your browser console saying that require is not defined. Why do you think that is ??
-Think about it for a minute and then read on.
+Remember the text you read before class! Think about it for a minute and then read on.
 
 ***
 
-The problem that arises here is that the browser doesn't know what require is. To fix this you need to change the following to the weather.js file:
+The problem that arises here is that the browser doesn't know what require is.  To fix this you need to change the following to the weather.js file:
+
 
 - delete the following lines:
 
@@ -225,14 +225,16 @@ const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const {Navigator} = require("node-navigator");
 ```
 
-and change the following line in getLocation():
+and change the following line in getLocation() og getWeather():
 
 ```JS
 // the change below has noting to do with the require problem, it is the way the position object is structured
 // FROM
 resolve(position);
+callback(JSON.parse(req.responseText));
 //TO
 resolve(position.coords);
+callback(JSON.parse(req.response));
 ``` 
 
 Now it should work in the browser. (HOPEFULLY!!)
