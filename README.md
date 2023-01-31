@@ -1,7 +1,7 @@
 # course material
 
 ## Schedule
-z8yTi*s@akI9
+
 ***
 
 | Week | Date | Subject                                                                  | Content | Teacher |
