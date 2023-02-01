@@ -31,16 +31,21 @@ Callbacks are also useful to configure how a function behaves. For example, you 
 
 Look at the following javascript code: 
 ```js 
-function greeting(name) {
-  console.log(`Hello, ${name}!`);
-}
-
-function processUserInput(callback) {
-  var name = prompt('Please enter your name:');
-  callback(name);
-}
-
-processUserInput(greeting);
+  const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  function greeting(name) {
+    console.log(`Hello, ${name}!`);
+    readline.close();
+  }
+  
+  function processUserInput(callback) {
+    readline.question(`What's your name? `, callback);
+  }
+  
+  processUserInput(greeting);
 ````
 1. Look at the code above and try to explain what the code does.
 2. Run the processUserInput function with a different callback (use lambda here) to console.log the name in uppercase.
