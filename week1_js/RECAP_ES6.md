@@ -144,7 +144,7 @@ class Animal {
 
 class Dog extends Animal {
     constructor(name, breed) {
-        super.constructor(name);
+        super(name);
         this.breed = breed;
     }
 
