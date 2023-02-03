@@ -203,7 +203,7 @@ const employee = new Employee("Steve Taylor", 50000, "01/01/2015");
 
 
 ```JS
-const calcaulator = function (num1, num2) {
+const calculator = function (num1, num2) {
     return num1 + num2;
 }
 ```
