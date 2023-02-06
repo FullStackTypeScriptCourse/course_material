@@ -83,8 +83,6 @@ callbacks can create callback hell leading to unmanageable code.
 - [Class Exercises 3](#class-exercises-3)
 - [Class Exercises 4](#class-exercises-4-weather-app)
 
-- a) open your favorite code editor and create a new folder javascriptWeek2
-
 ### Class Exercises 1
 
 Let's start with a simple callback example to warm up:
@@ -92,8 +90,7 @@ Let's start with a simple callback example to warm up:
 - a) Create a new folder called callbacks and create a new file called callbacks.js
 - b) Create a function called calculate that takes 3 parameters: x, y and a callback called operation
 - c) Create another function called add that takes 2 parameters: x and y and returns the sum of x and y
-- d) The calculate function should return the result of the operation function
-- e) Call the calculate function with the appropriate parameters to test your code
+- d) Call the calculate function with the appropriate parameters to test your code
 
 Right now our calculator only supports addition, that makes that calculator pretty
 useless.
@@ -168,7 +165,7 @@ function getWeather(coords, callback) {
     const req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = function () {
-        if (req.status == 200) {
+        if (req.status === 200) {
             callback(JSON.parse(req.responseText));
         } else {
             callback(new Error(req.statusText));
@@ -199,7 +196,7 @@ function getLocation() {
                 resolve(position);
             });
         } catch (e) {
-            reject(e);
+            reject(new Error(e));
         }
     });
 }
@@ -270,6 +267,7 @@ The problem that arises here is that the browser doesn't know what require is.  
 ```JS
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const {Navigator} = require("node-navigator");
+const navigator = new Navigator();
 ```
 
 and change the following line in getLocation() og getWeather():

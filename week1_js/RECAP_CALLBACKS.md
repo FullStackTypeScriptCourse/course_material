@@ -47,7 +47,7 @@ Look at the following javascript code:
   
   processUserInput(greeting);
 ````
-1. Look at the code above and try to explain what the code does.
+1. Look at the code above and try to explain what the code does. (apart from the first 4 lines)
 2. Run the processUserInput function with a different callback (use lambda here) to console.log the name in uppercase.
 3. Run the processUserInput function with a different callback (use lambda here) to console.log the length of the name
 
