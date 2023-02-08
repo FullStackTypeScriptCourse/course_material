@@ -130,7 +130,7 @@ Great!! Now that we are warmed up, let's try to make a litte weather app that wi
 - b) Inside the weather folder create a new node project with the following command:
 
 ```BASH
-npm init - y
+npm init -y
 ```
 
 - c) We will need to use the following npm packages:
