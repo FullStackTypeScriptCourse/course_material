@@ -1,4 +1,5 @@
 # Week 3: Typescript 1
+structurally typed type system 
 
 ## Objectives
 
@@ -8,7 +9,8 @@
 - Setup project to autotranspile while running code
 
 ## How to prepare before class
-
+1. See [this video (appr. 1 hour)](https://www.youtube.com/watch?v=d56mG7DezGs&ab_channel=ProgrammingwithMosh)
+2. Skim this [TS Intro (appr 30 min.)](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 ## Class Exercise 1
 - Install typescript globally with `npm install -g typescript`
@@ -23,11 +25,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body><div id="root"></div></body>
   <script src="./index.js"></script>
 </html>
 ```
-- Create an empty index.ts file at the same level as index.html.
+- Create an index.ts file at the same level as index.html, with the following code:
+```typescript
+const helloWorld = (name: string):string => {
+  return `Hello from ${name}`;
+};
+document.getElementById("root")!.innerHTML = helloWorld("TypeScript");
+```
+
 - Open a terminal and type tsc --init (assuming you have installed global TypeScript) this will create for you a tsconfig.json 
 - Run `tsc` in the terminal to transpile the typescript code to javascrip`. This will create a index.js file.
 - Run `tsc --watch` or `tsc -w` to watch for changes in the typescript code and transpile it to javascript on the fly.
@@ -46,6 +55,16 @@
 - `exclude` the folder(s) you want to prevent from being compiled, for example the node_modules folder.
 
 ## Class Exercise 2
+1. Rewrite the code from the previous exercise to do the following:
+- Create a class called `Person` with the following properties:
+  - `name` (string)
+  - `age` (number)
+  - `gender` (string)
+- Create a populator function to populate an array of 10 Person objects.
+- Create a function that can map the array of Person object to an html table with headers and 10 rows
+- Attach the table to the root element of the html page.
+- Add a button to the page that when clicked will sort the table by age in ascending order. 
+- Change the button so it can toggle the sort order between ascending and descending.
 
 ## Why typescript?
 - Being coherent in typing and consistent with static types
@@ -73,29 +92,45 @@ let swordSkill: (string | number)[] = ["B", 5, 144, 398];
 The `|` character is for doing a union of different types.
 
 ### The ```any``` type
+The `any` type is used when we deal with third-party programs and expect any variable but we don’t know the exact type of variable. Any data type is used because it helps in opt-in and opt-out of type checking during compilation. 
+
 ```typescript
 let myVariable: any = 10;
 myVariable = "Hello";
 myVariable = true;
 ```
 ### The ```unknown``` type
-With `unknown` you can assign any type as in any, but this time the compiler gets the error when you try to assign to another type. So if you don't know what type it will be, try using unknown instead of any.
+`unknown` is the set of all possible values. Any value can be assigned to a variable of type `unknown`. This means that `unknown` is a supertype of every other type. `unknown` is called the top type for that reason.
+With `unknown` you can assign any type as in `any`, but this time the compiler gets the error when you try to assign to another type. So if you don't know what type it will be, using `unknown` is a much better (a lot safer) than using `any`.
+
 ```typescript
 let myVariable: unknown = 10;
 myVariable = "Hello";
 myVariable = true;
 ```
 ### The ```never``` type
+The type that should never happen. E.g. in conditionals if we return something from a callback, but what was sent in as a calllback was not a function. see more at: https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/.
+
 ```typescript
 function throwError(message: string): never {
   throw new Error(message);
 }
 ```
 ### The ```void``` type
+`void` has special meaning in function return types, and is not an alias for undefined. The intent of `void` is that a function's return value will not be observed. So any type will do in a function since it will jus be ignored. Like this:
 ```typescript
-function log(message: string): void
+declare function forEach<T>(arr: T[], callback: (el: T) => void): void;
+let target: number[] = [];
+forEach([1, 2, 3], el => target.push(el)); //array.push returns a number, but foreach does not care (if the return type had been defined to `unknown` then that would have caused an error.)
 ```
+
 ### The ```null``` and ```undefined``` types
+- `undefined`: The value `undefined` means value is not assigned & you don’t know its value. It is an unintentional absence of value. It means that a variable has been declared but has not yet been assigned a value. `undefined` is the default value assigned to a variable that is declared but never assigned a value.
+- `null`: The value `null` indicates that you know that the field does not have a value. It is an intentional absence of value. We have to assign Null to variable to make it null.
+
+The JSON standard has support for encoding null but not undefined.
+`JSON.stringify({willStay: null, willBeGone: undefined}); // {"willStay":null}`
+
 ```typescript
 let u: undefined = undefined;
 let n: null = null;
@@ -140,9 +175,9 @@ let myColor: Color = Color.Green;
 let myUnion: string | number = 10;
 myUnion = "Hello";
 ```
-### The ```type``` type
+### The ```type alias``` 
 ```typescript
-type MyType = string | number;
+type MyType = string | number; // Type Alias
 let myType: MyType = 10;
 myType = "Hello";
 ```
@@ -194,9 +229,12 @@ function myFunction(name: string, age: number): string {
 }
 ```
 ### The ```type assertion``` type
+- To specify a more specific type for a variable, we can use the `as` keyword.
+- TypeScript only allows type assertions which convert to a more specific or less specific version of a type. This rule prevents “impossible” coercions like:
+- In some cases when this is too strict we can use the double assertion like: `myVariable as any as string`, by first asserting to any and then to the desired type.
 ```typescript
 let myVariable: any = "Hello";
-let myString: string = myVariable as string;
+let myString: string = myVariable as string; // type assertion using the "as" keyword
 ```
 ### The ```type alias``` type
 ```typescript
@@ -231,10 +269,18 @@ function log(value: string | number) {
   }
 }
 ```
+
 ### The ```type widening``` type
 ```typescript
 let myVariable: any = "Hello";
 let myString: string = myVariable;
+```
+
+### The literal type
+```typescript
+function compare(a: string, b: string): -1 | 0 | 1 {
+  return a === b ? 0 : a > b ? 1 : -1;
+}
 ```
 
 ### Optional parameters in TypeScript
@@ -252,32 +298,105 @@ heal(skeleton, cure); // OK
 ```
 - The first call won't work because we need to pass at least two parameters, but the second and third are fine. message is an optional parameter. When not passed it will be received as undefined.
 
-### Generic types in TypeScript
+### // 👇️ Index signature
+[Source](https://bobbyhadz.com/blog/typescript-key-string-any)
+- The **index signature** specifies that when an object is indexed with a string, it returns a value with any type.
+- Looks like this: `{[key: string]: any}`
+- Is used when we don't know all the names of a type's properties and the shape of their values ahead of time.
+- Example:
 ```typescript
-type Player = {
-  name: string;
-  hp: number;
+// function returning index signature
+// (a key-value structure with key string and value any)
+function getObj(): { [key: string]: any } {
+  return { name: 'Tom', age: 30, pizza: true };
+}
+
+// 👇️ Interface using index signature
+interface Person {
+  [index: string]: any;
+}
+
+// 👇️ const p1: Person
+const p1: Person = { name: 'Tom', age: 30 };
+
+// 👇️ Type using index signature
+type Animal = {
+  [index: string]: any;
 };
 
-type Enemy = {
-  name: string;
-  hp: number;
-};
-
-type Spell = {
-  name: string;
-  power: number;
-};
-
-const getPartyLeader = <T extends { hp: number }>(memberList: T[]) => {
-  return memberList[0];
-};
-
-const playerPartyLeader = getPartyLeader(partyOfPlayers); // Ok
-const enemyPartyLeader = getPartyLeader(partyOfEnemies); // Ok
-const whatAreYouTrying = getPartyLeader(spellList); // Error
+const a1: Animal = { name: 'Alfred', age: 3 };
 ```
-- We can now only pass types containing the hp property.
+
+
+### Generic types in TypeScript
+[Guide](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript)
+- When to use genric types in typescript:
+  - Generics can appear in functions, types, classes, and interfaces
+  - When using functions and you have some code that is not easily typed for all use cases.
+  - 
+```typescript
+function identity<T>(value: T): T {
+  return value;
+}
+const result = identity(123); // number type is inferred here
+const result2 = identity<number>(123); // number type is explicitly given here
+``` 
+- The above function is made type safe in that it must return the same type as its first argument
+- Another more complex example:
+```typescript
+function pickObjectKeys<T, K extends keyof T>(obj: T, keys: K[]) { // K becomes a union of the keys of T
+  let result = {} as Pick<T, K> // Pick<T, K> is a Typescript language utility type.
+  for (const key of keys) {
+    if (key in obj) {
+      result[key] = obj[key]
+    }
+  }
+  return result
+}
+
+const language = {
+  name: "TypeScript",
+  age: 8,
+  extensions: ['ts', 'tsx']
+}
+
+const ageAndExtensions = pickObjectKeys(language, ['age', 'extensions']) // since language is given a first argument ageAndExtensions is inferred to be { age: number, extensions: string[] }
+```
+- And another example with async function:
+```typescript
+async function fetchApi<ResultType>(path: string): Promise<ResultType> {
+  const response = await fetch(`https://example.com/api${path}`);
+  return response.json();
+}
+```
+- In the above code the ResultType could not be inferred from the return type of the fetchApi function.
+- So we MUST specify the type of the result when calling the function:
+
+```typescript
+type User = {
+  name: string;
+  age: number;
+}
+
+const data = await fetchApi<User[]>('/users')
+```
+#### Generic Default Types
+```typescript
+async function fetchApi<ResultType = Record<string, any>>(path: string): Promise<ResultType> {
+  ...
+}
+```
+
+#### Generic Default Types
+```typescript
+async function fetchApi<ResultType = Record<string, any>>(path: string): Promise<ResultType> {
+  ...
+}
+```
+- The above code is the same as the previous example, but the default type is Record<string, any> which is a generic type that represents an object with string keys and any values.
+- So if we don't specify the type of the result when calling the function, the default type will be used.
+
+
 
 ### The exclamations mark (!) in TypeScript
 ```typescript

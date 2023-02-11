@@ -6,8 +6,10 @@
 - Get a bit of routine working with the different react ojbect types
 - Understand how to use typescript with react hooks
 - Understand how to use typescript with react state as props
+- Understand how to use typescript with react events
 
 ## How to prepare before class
+- See this [video: 1:07:00](https://www.youtube.com/watch?v=jrKcJxF0lAU&ab_channel=LaithAcademy)
 
 ## Class Exercise 1
 1. Start a new react project with typescript using vite: `npm init vite@latest my_react_ts_app -- --template react-ts`
