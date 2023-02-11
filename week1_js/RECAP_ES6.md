@@ -144,7 +144,7 @@ class Animal {
 
 class Dog extends Animal {
     constructor(name, breed) {
-        super.constructor(name);
+        super(name);
         this.breed = breed;
     }
 
@@ -203,14 +203,17 @@ const employee = new Employee("Steve Taylor", 50000, "01/01/2015");
 
 
 ```JS
-const calcaulator = function (num1, num2) {
+const calculator = function (num1, num2) {
     return num1 + num2;
 }
 ```
 
 da) Change the calculator function to an arrow function.
+
 db) Change the function to a one line function by use the implicit return.
+
 dc) Create a default value for one of the parameters.
+
 dd) Use the rest operator to change the function to accept any number of parameters.
 
 ```JS
