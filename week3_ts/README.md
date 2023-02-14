@@ -41,9 +41,10 @@ document.getElementById("root")!.innerHTML = helloWorld("TypeScript");
 - Run `tsc` in the terminal to transpile the typescript code to javascrip`. This will create a index.js file.
 - Run `tsc --watch` or `tsc -w` to watch for changes in the typescript code and transpile it to javascript on the fly.
 - Open the index.html file in the browser and open the console to see the output of the transpiled code.
-
+- Change the code in index.ts to insert an input field and a button to the html page. When the button is clicked, the text from the input field should be displayed inside the root element of the html page.
 
 ### Tsconfig.json
+
 - `target` Should be ES6 or higher. It is the version of JS we are converting our TS code to. Depending on the browsers you want to support, you may need to set some older version. It can be a good learning resource too – try playing with different versions and see what JS code is generated.
 - `module` Should be `es2015` or higher. It defines what kind of syntax you will use for modules. commonjs which is the default uses require/module.exports and modern JS (ES6+) uses import/export. If you want to use import/export you need to change target to ES6 or higher. In the example project we will use this syntax so check the rest of the article for this.
 - `lib` You need it to specify additional libraries you will use in your project and check additional types, for example DOM related.
@@ -91,7 +92,7 @@ let swordSkill: (string | number)[] = ["B", 5, 144, 398];
 ```
 The `|` character is for doing a union of different types.
 
-### The ```any``` type
+### The `any` type
 The `any` type is used when we deal with third-party programs and expect any variable but we don’t know the exact type of variable. Any data type is used because it helps in opt-in and opt-out of type checking during compilation. 
 
 ```typescript
@@ -99,7 +100,7 @@ let myVariable: any = 10;
 myVariable = "Hello";
 myVariable = true;
 ```
-### The ```unknown``` type
+### The `unknown` type
 `unknown` is the set of all possible values. Any value can be assigned to a variable of type `unknown`. This means that `unknown` is a supertype of every other type. `unknown` is called the top type for that reason.
 With `unknown` you can assign any type as in `any`, but this time the compiler gets the error when you try to assign to another type. So if you don't know what type it will be, using `unknown` is a much better (a lot safer) than using `any`.
 
