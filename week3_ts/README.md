@@ -12,7 +12,7 @@ structurally typed type system
 1. See [this video (appr. 1 hour)](https://www.youtube.com/watch?v=d56mG7DezGs&ab_channel=ProgrammingwithMosh)
 2. Skim this [TS Intro (appr 30 min.)](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
-## Class Exercise 1
+## Class Exercise 1 - together
 - Install typescript globally with `npm install -g typescript`
 - Create a new empty folder
 - Place an index.html with the basic HTML5 structure inside.
@@ -38,9 +38,9 @@ document.getElementById("root")!.innerHTML = helloWorld("TypeScript");
 ```
 
 - Open a terminal and type tsc --init (assuming you have installed global TypeScript) this will create for you a tsconfig.json 
-- Run `tsc` in the terminal to transpile the typescript code to javascrip`. This will create a index.js file.
+- Run `tsc` in the terminal to transpile the typescript code to javascript. This will create a index.js file.
 - Run `tsc --watch` or `tsc -w` to watch for changes in the typescript code and transpile it to javascript on the fly.
-- Open the index.html file in the browser and open the console to see the output of the transpiled code.
+- Open the index.html file in the browser.
 - Change the code in index.ts to insert an input field and a button to the html page. When the button is clicked, the text from the input field should be displayed inside the root element of the html page.
 
 ### Tsconfig.json
@@ -55,7 +55,7 @@ document.getElementById("root")!.innerHTML = helloWorld("TypeScript");
 - `include` the folder(s) you want to include to be compiled, for example the src folder
 - `exclude` the folder(s) you want to prevent from being compiled, for example the node_modules folder.
 
-## Class Exercise 2
+## Class Exercise 2 - individually
 1. Rewrite the code from the previous exercise to do the following:
 - Create a class called `Person` with the following properties:
   - `name` (string)

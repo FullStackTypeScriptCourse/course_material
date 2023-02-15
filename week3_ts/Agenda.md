@@ -1,5 +1,5 @@
 # Typescript week 1
-1. Quick demo project to get started ([see example](README.md)).
+1. Quick demo project to get started ([see example](README.md) Class exercise 1).
 2. What is Typescript and how does it benefit us?
     - Being coherent in typing and consistent with static types
     - Providing documentation and IntelliSense of the available possibilities
