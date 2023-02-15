@@ -6,7 +6,7 @@
     - Detecting bugs early 
 3. How to use:
     - tsconfig.json:
-    - `compilerOptions`: This is the main section of the file and contains the options that will be used by the TypeScript compiler. Some common options include `target`, `module`, `strict`, `outDir`, `sourceMap`, and `esModuleInterop`. 
+    - [`compilerOptions`](https://github.com/microsoft/TypeScript-New-Handbook/blob/master/reference/Compiler%20Options.md): This is the main section of the file and contains the options that will be used by the TypeScript compiler. Some common options include `target`, `module`, `strict`, `outDir`, `sourceMap`, and `esModuleInterop`. 
     - `include`: This option specifies an array of file or directory names that should be included when compiling the project. By default, TypeScript will compile all .ts and .tsx files in the current directory and its subdirectories. You can use the include option to include additional files or directories.
     - `exclude`: This option specifies an array of file or directory names that should be excluded when compiling the project. By default, TypeScript will exclude the node_modules directory and any files that match the outDir option. You can use the exclude option to exclude additional files or directories.
     - `files`: This option specifies an array of file names that should be included in the project. This is an alternative to using the include and exclude options. If you use the files option, TypeScript will only compile the specified files and will ignore any other files in the project.
