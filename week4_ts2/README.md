@@ -56,8 +56,8 @@ export default function PersonDisplay({ name, age }: Person) {
 - Auto-completion and documentation
 
 #### React return types
-- React components can return a ReactElement, a string, or null.
-- React.ReactElement, React.ReactNode and JSX.Element are all the same type.
+- React components can return a `ReactElement`, a `string`, or `null`.
+- `React.ReactElement`, `React.ReactNode` and JSX.Element are all the same type.
 - React.ReactNode is the most generic type that can be returned from a component.
 - But it is not recommended to return a string from a component, because it is not a valid ReactElement and it is generally best to just let TypeScript automatically infer the return type.
 
@@ -81,7 +81,7 @@ The above code shows how send a component as a prop to another component in reac
 type VPosition = 'top' | 'bottom'
 type HPositon = 'left' | 'right'
 
-export type PositionValues = `${VPosition}-${HPositon}`
+type PositionValues = `${VPosition}-${HPositon}`
 ```
 - The above code creates a type that can only be one of the following values: `top-left`, `top-right`, `bottom-left`, `bottom-right`.
 
@@ -91,28 +91,29 @@ export type PositionValues = `${VPosition}-${HPositon}`
 type VPosition = 'top' | 'bottom'
 type HPositon = 'left' | 'right'
 
-export type PositionValues = `${VPosition}-${HPositon}`
-export type ExcludePositionValues = Exclude<PositionValues, 'top-left'>
-export type ExtractPositionValues = Extract<PositionValues, 'top-left'>
+type PositionValues = `${VPosition}-${HPositon}`
+type ExcludePositionValues = Exclude<PositionValues, 'top-left'>
+type ExtractPositionValues = Extract<PositionValues, 'top-left'>
 ```
 - The last 3 lines of code creates a type that excludes `top-left` from `PositionValues` so that ExcludePositionValues can have 3 possible values and a type that extracts `top-left` from `PositionValues` so that ExtractPositionValues can only have the value `top-left`.
 
 ### Hooks
 - `useState()` Typing useState will often not require any typing from os, because TypeScript will try to infer the type. 
   - In other scenarios, for example when the initial value is different from future values, you need to specify it directly.
-- We never hav to type state setter methods since they are automatically typed as React.Dispatch<React.SetStateAction<number>> with number being replaced by the inferred/specified type.
+- We never have to type state setter methods since they are automatically typed as React.Dispatch<React.SetStateAction<number>> with number being replaced by the inferred type.
 
 ```typescript
 export default function myFunc() {
   // 3 different ways to type useState
-  const [personList, setPersonList] = useState<Person[] | null>(null)   // using a Person type or null
-  const [personList, setPersonList] = useState<Person[]>([])            // using a Person type or an empty array
+  const [personList, setPersonList] = useState<Person[] | null>(null)   // using a Person array type or null
+  const [personList, setPersonList] = useState<Person[]>([])            // using a Person array type or an empty array
   const [person, setPerson] = useState<Person>({} as Person)            // type casting an empty object to the Person type.
 }
 ```
 
 ### State as props
 One of the more cumbersome parts of React is passing state around. In React, you can pass state as props to other components. This is a bit cumbersome, because you have to pass the state and the setter method for that state to the component, and specify the type of the state.
+
 ```typescript
 type PersonProps = {
   person: Person,
@@ -123,6 +124,7 @@ const PersonComponent = ({person, setPerson}: PersonProps) => {
   // ...
 }
 ```
+
 - To make this a bit easier, you can create a custom hook that returns the state and the setter method for that state.
 ```typescript
 export const usePerson = () => {
@@ -141,7 +143,6 @@ const PersonComponent = () => {
 
 ### useReducer
 - `useReducer` is a hook that is used for state management. It is similar to `useState`, but it is more flexible and allows you to manage more complex state.
-- It is similar to useState, but it is more flexible and allows you to manage more complex state.
 - `useReducer` takes a reducer function and an initial state as arguments.
 - The reducer function takes the current state and an action as arguments and returns the new state.
 - The action is an object that has a type property and optionally a payload property.
@@ -437,6 +438,7 @@ const ref = React.createRef();
   ### Generics
   - Generics are a way of creating reusable components that can work with different types of data. They allow you to define a component once and use it many times with different types of data.
   - In the example below, we create a generic component called Box that can be used to display any type of data. We can then use the Box component to display a string, a number, or an array of strings.
+
   ```typescript
   import React from 'react';
 
@@ -458,6 +460,7 @@ const ref = React.createRef();
     );
   }
   ```
+
   - In this example, we create a generic component called Box that can be used to display any type of data. We can then use the Box component to display a string, a number, or an array of strings.
 
   ### Generic Types
