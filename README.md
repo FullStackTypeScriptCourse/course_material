@@ -11,7 +11,7 @@
 | 3 | 15/02/2023     | [Typescript 1](week3_ts/README.md)                                       | transpiler, autotranspile, tsconfig, type, interface, class | THA |
 | 4 | 22/02/2023     | [Typescript 2](week4_ts2/README.md)                                      | Using typescript in a react project | THA |
 | 5 | 01/03/2023     | Group Project 1                                                          | Define Project. Write API documentation, Frontend Mockup (Figma). | JORG/THA |
-| 6 | **09/03/2023** | NodeJS/Express 1                                                         |  | JORG |
+| 6 | 08/03/2023 | NodeJS/Express 1                                                         |  | JORG |
 | 7 | 15/03/2023     | Express 2 - Middlewares                                                  |  | JORG |
 | 8 | 22/03/2023     | Mongo/Mongoose                                                           |  | JORG |
 | 9 | 29/03/2023     | [GraphQL](week9_graphql/README.md)                                       |  | THA |
@@ -28,12 +28,6 @@
 
 
 ***
-
-## Important !!
-
-The class on the 09/03 will take place on Thursdays. It's going to be a workshop that takes place in room 3.12.
-For Bornholm students, the lektion will take place another time on Bornholm. Date and time will be announced later.
-
 ## Hand-in and Exam.
 1. Create a GitHub repo for all your work in this course and link to it [here](https://docs.google.com/spreadsheets/d/1IKFYbYwqUlZ0sUaFcLaxl154NgoaRl0g57yY6k3ipo0/edit?usp=sharing)
 2. The repo should contain a folder for each week. Each folder should contain a README.md file with the answers to the exercises.
