@@ -4,27 +4,27 @@
 
 ***
 
-| Week | Date           | Subject                                                                    | Content | Teacher |
-| --- |----------------|----------------------------------------------------------------------------| --- | --- |
-| 1 | 01/02/2023     | [Part 1 ](week1_js/RECAP_CALLBACKS.md) && [Part 2 ](week1_js/RECAP_ES6.md) | ES6 recap, Callback, Writing functions that use callbacks | JORG |
+| Week | Date           | Subject                                                                    | Content                                                                 | Teacher |
+| --- |----------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------| --- |
+| 1 | 01/02/2023     | [Part 1 ](week1_js/RECAP_CALLBACKS.md) && [Part 2 ](week1_js/RECAP_ES6.md) | ES6 recap, Callback, Writing functions that use callbacks               | JORG |
 | 2 | 08/02/2023     | [Javascript 2](week2_js/PROMISES.md)                                       | Asynchronous javascript with Promises (lave egne promises), Async await | JORG |
-| 3 | 15/02/2023     | [Typescript 1](week3_ts/README.md)                                         | transpiler, autotranspile, tsconfig, type, interface, class | THA |
-| 4 | 22/02/2023     | [Typescript 2](week4_ts2/README.md)                                        | Using typescript in a react project | THA |
-| 5 | 01/03/2023     | Group Project 1                                                            | Define Project. Write API documentation, Frontend Mockup (Figma). | JORG/THA |
-| 6 | 08/03/2023 | [NodeJS/Express 1](week6_node/README.md)                                                       |  | JORG |
-| 7 | 15/03/2023     | Express 2 - Middlewares                                                    |  | JORG |
-| 8 | 22/03/2023     | Mongo/Mongoose                                                             |  | JORG |
-| 9 | 29/03/2023     | [GraphQL](week9_graphql/README.md)                                         |  | THA |
-| 10 | 05/04/2023     | Group Project 2                                                            | Backend project | JORG/THA |
-| 11 | 12/04/2023     | [React 1](week11_state_management/README.md)                               | State management | THA |
-| 12 | 19/04/2023     | [React 2](week12_react_hooks/README.md)                                    | Hooks (lav egne hooks). Recap | THA  |
-| 13 | 26/04/2023     | [React 3](week13_graphql2/README.md) (Frontend GraphQL)                    | Libraries for  | THA |
-| 14 | 03/05/2023     | Project 3                                                                  |  |  |
-| 15 | 10/05/2023     | Project 3                                                                  |  |  |
-| 16 | 17/05/2023     | Project 3                                                                  |  |  |
-| 17 | 24/05/2023     | Hand-in                                                                    |  |  |
-| 18 | 30-31/05/2023     | Eksamen                                                                    |  | |
-|  |                |                                                                            |  |  |
+| 3 | 15/02/2023     | [Typescript 1](week3_ts/README.md)                                         | transpiler, autotranspile, tsconfig, type, interface, class             | THA |
+| 4 | 22/02/2023     | [Typescript 2](week4_ts2/README.md)                                        | Using typescript in a react project                                     | THA |
+| 5 | 01/03/2023     | Group Project 1                                                            | Define Project. Write API documentation, Frontend Mockup (Figma).       | JORG/THA |
+| 6 | 08/03/2023 | [NodeJS/Express 1](week6_node/README.md)                                     | Node.js: Read & Write to files, enviroment variables, server, REST API  | JORG |
+| 7 | 15/03/2023     | Express 2 - Middlewares                                                    |                                                                         | JORG |
+| 8 | 22/03/2023     | Mongo/Mongoose                                                             |                                                                         | JORG |
+| 9 | 29/03/2023     | [GraphQL](week9_graphql/README.md)                                         |                                                                         | THA |
+| 10 | 05/04/2023     | Group Project 2                                                            | Backend project                                                         | JORG/THA |
+| 11 | 12/04/2023     | [React 1](week11_state_management/README.md)                               | State management                                                        | THA |
+| 12 | 19/04/2023     | [React 2](week12_react_hooks/README.md)                                    | Hooks (lav egne hooks). Recap                                           | THA  |
+| 13 | 26/04/2023     | [React 3](week13_graphql2/README.md) (Frontend GraphQL)                    | Libraries for                                                           | THA |
+| 14 | 03/05/2023     | Project 3                                                                  |                                                                         |  |
+| 15 | 10/05/2023     | Project 3                                                                  |                                                                         |  |
+| 16 | 17/05/2023     | Project 3                                                                  |                                                                         |  |
+| 17 | 24/05/2023     | Hand-in                                                                    |                                                                         |  |
+| 18 | 30-31/05/2023     | Eksamen                                                                    |                                                                         | |
+|  |                |                                                                            |                                                                         |  |
 
 
 ***
