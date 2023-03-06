@@ -63,6 +63,12 @@ server.listen(3000, () => {
 });
 
 ```
+In this example, we're creating an HTTP server that listens on port 3000. Whenever a new request is received, the
+callback function is called with two arguments: the request object and the response object.
+
+Inside the callback function, we set the response headers using `res.writeHead()` and write the response body using
+`res.write()`. Finally, we end the response with `res.end()`.
+
 
 ### Express
 
@@ -124,14 +130,6 @@ Express provides a powerful set of features for building web applications, inclu
 - [Express](https://expressjs.com/)
 
 ***
-
-
-
-In this example, we're creating an HTTP server that listens on port 3000. Whenever a new request is received, the 
-callback function is called with two arguments: the request object and the response object.
-
-Inside the callback function, we set the response headers using res.writeHead() and write the response body using 
-res.write(). Finally, we end the response with res.end().
 
 ### Exercises
 
