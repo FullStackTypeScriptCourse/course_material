@@ -116,6 +116,14 @@ Express provides a powerful set of features for building web applications, inclu
 
 *** 
 
+### Read and Write files
+
+Node.js provides a built-in `fs` module that allows you to work with the file system on your computer. 
+This module provides a range of methods that allow you to read, write, and delete files and directories.
+
+**Read the documentation for the fs module here:**
+- [fs](https://nodejs.org/api/fs.html)
+
 ### Links
 
 **Make sure you look at the links below before class!! :smile:**
