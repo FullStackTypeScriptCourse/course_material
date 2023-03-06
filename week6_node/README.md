@@ -18,6 +18,8 @@ Overall, Node.js is a powerful and flexible tool that allows developers to write
 It's a great option for building scalable and high-performance applications, and it's supported by a large and active
 community of developers.
 
+***
+
 ### Node modules
 
 In Node.js, modules are essentially separate files that contain code that can be used in other parts of your program. 
@@ -69,6 +71,7 @@ callback function is called with two arguments: the request object and the respo
 Inside the callback function, we set the response headers using `res.writeHead()` and write the response body using
 `res.write()`. Finally, we end the response with `res.end()`.
 
+***
 
 ### Express
 
