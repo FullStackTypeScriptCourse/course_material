@@ -157,7 +157,8 @@ npm init -y
 ```bash
 npm install --save-dev ts-node
 npm install --save-dev @types/node
-npm install --save-dev @types/http-server
+npm install --save-dev @types/http-server // only for http-server
+npm install --save-dev @types/express // only for express-server
 ```
 
 3. Next, we need to create a `tsconfig.json` file. This file contains the configuration for the Typescript compiler.
