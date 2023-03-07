@@ -150,10 +150,50 @@ so it's important to understand how Node.js works before we start using Express.
 **Remember to read the** [Node.js Guide](https://nodejs.org/en/docs/guides/) before you start. 
 **Reading the documentation is an important part of learning how to use a new tool!**
 
+#### How to create a new Node.js projectwith Typescript
+
+1. The first step is to create a new Node.js project. You can do this by creating a new directory and running `npm init -y`.
+
+```bash 
+mkdir node-server
+cd node-server
+npm init -y
+```
+
+2. To make this a Typescript project, we need to install a couple of Typescript types and the `@types/node` package.
+
+```bash
+npm install --save-dev ts-node
+npm install --save-dev @types/node
+npm install --save-dev @types/http-server
+```
+
+3. Next, we need to create a `tsconfig.json` file. This file contains the configuration for the Typescript compiler.
+
+```bash
+npx tsc --init
+```
+
+4. Remember to change the following in the `tsconfig.json` file:
+
+```json
+{
+  "outDir": "./dist/",  /* Specify an output folder for all emitted files. */
+},
+"include": [
+"src/**/*"
+],
+"exclude": [
+"node_modules",
+"dist"
+]
+```
 
 #### 1. Create a simple Node.js server
 
-// To be implemented
+1. The first step is to create a new Node.js project. See the instructions above for how to do this.
+
+
 
 
 #### 2. Create a simple Express server
