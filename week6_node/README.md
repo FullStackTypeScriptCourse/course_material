@@ -206,9 +206,9 @@ PORT=3000
 **Don't forget to add the `.env` file to your `.gitignore` file and don't add single quotes around the values. Another thing to rembember to add to the gitignore file is the `dist` and `node_module` folder.**
 
 7. To access the environment variables we can import the `dotenv` package and call the `config()` method. 
-  - **Remember that you have to call the `config()` method before you can access the environment variables.**
-  - **The `config()` method takes an object as an argument. In this object you can specify the path to your `.env` file.**
-  - **If you don't specify the path to your `.env` file, the `config()` method will look for a `.env` file in the root of your project.**
+  - Remember that you have to call the `config()` method before you can access the environment variables.
+  - The `config()` method takes an object as an argument. In this object you can specify the path to your `.env` file.
+  - If you don't specify the path to your `.env` file, the `config()` method will look for a `.env` file in the root of your project.
 
 
 ```typescript 
