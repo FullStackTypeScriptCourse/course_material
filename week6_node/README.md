@@ -142,7 +142,7 @@ This module provides a range of methods that allow you to read, write, and delet
 
 ***
 
-#### How to create a new Node.js project with Typescript
+### How to create a new Node.js project with Typescript
 
 1. The first step is to create a new Node.js project. You can do this by creating a new directory and running `npm init -y`.
 
@@ -274,7 +274,7 @@ In this exercise I want you to create a simple Node.js web server that listens o
 3. The home route should return a simple HTML page with a title and a couple of links to the other routes.
 4. The about route should return a simple HTML page with a title and a couple of paragraphs.
 5. The logger route should return an HTML with a title and a sorted list of all the log messages.
-  - the list should be sorted either by date or by severity.
+   - you should be able to sort the log messages by date and by severity.
 6. The data route should return a JSON object. [JSON Object](https://gist.github.com/tysker/1ebc990181fb31ab97306521fd36771a)
 7. The date route should return a date and time from the url query string. `date?year=2022&month=11&day=30&hour=12&minute=30&second=30`. Use the `url` module to parse the query string.
 
