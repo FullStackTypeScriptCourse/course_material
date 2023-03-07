@@ -107,15 +107,16 @@ Read the `getting started` guide for Express here:
 **Example of a simple express server.**
 
 ```JS
-const express = require('express');
+import express = require('express');
 const app = express();
 
+
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+   res.send('Hello, world!');
 });
 
 app.listen(3000, () => {
-  console.log('Server listening on port 3000');
+   console.log(`Server is listening to http://localhost:3000`);
 });
 
 ```
@@ -282,4 +283,44 @@ In this exercise I want you to create a simple Node.js web server that listens o
 
 #### 2. Create a simple Express server
 
-// To be implemented
+In this exercise I want you to create a simple Express web server that listens on port 3000.
+This exercise is very similar to the previous exercise, but this time you should use Express.
+There are some differences between Express and Node.js (http module), so make sure you read the documentation for Express.
+
+1. The first step is to create a new Node.js project. See the instructions above for how to do this.
+2. Change the above Node.js project to an Express project.
+3. I also want you to install `nodemon` and `morgan` as dev dependencies. [nodemon](https://www.npmjs.com/package/nodemon) and [morgan](https://www.npmjs.com/package/morgan);
+4. In you package.json file add the following script:
+
+```json  
+"scripts": {
+    "start:dev": "NODE_ENV=development nodemon --exec ts-node app.ts",
+    "start:prod": "NODE_ENV=production nodemon --exec ts-node app.ts"
+  },
+```
+5. In the above script we are using the `NODE_ENV` environment variable to specify if we are in development or production mode. 
+6. To get `morgan` to work with typescript you have to install the `@types/morgan` package. 
+7. Run the above script. Nodemon will now watch for changes in your project and restart the server when you make changes. 
+8. morgan is a middleware that logs all the requests to the console. You can use this middleware to log all the requests to the console.
+
+Example:
+
+```typescript  
+import morgan = require('morgan');
+import express = require('express');
+const app = express();
+
+if (process.env.NODE_ENV === 'development') {
+    console.log('Development mode')
+    app.use(morgan('dev'));
+}
+
+```
+
+9. Remember to use the `dotenv` package to access the environment variables and the `log4js` package to log messages to the console and to a file.
+
+
+`morgan` is one of the many `middlewares` we are going to use. We are going to talk more about `middelware` more in the next chapter. 
+For now, you can think of `middleware` as a function that is executed before the request reaches the route handler. 
+
+
