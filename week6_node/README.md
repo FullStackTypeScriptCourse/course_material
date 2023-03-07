@@ -1,5 +1,21 @@
 ## Node.js
 
+### Links
+
+**Make sure you look at the links below before class!! :smile:**
+
+#### Node
+- [Node.js Guide](https://nodejs.org/en/docs/guides/)
+- [NOde NPM Guide](https://nodejs.dev/en/learn/an-introduction-to-the-npm-package-manager/)
+- [Node.js with Typescript](https://nodejs.dev/en/learn/nodejs-with-typescript/)
+- [Node.js fs file system](https://nodejs.dev/en/api/v19/documentation/)
+- [Using environment variables](https://nodejs.dev/en/learn/how-to-read-environment-variables-from-nodejs)
+  - [dotenv](https://www.npmjs.com/package/dotenv)
+
+
+#### Express
+- [Express](https://expressjs.com/)
+
 ### Node
 
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment. It allows developers to use
@@ -124,33 +140,9 @@ This module provides a range of methods that allow you to read, write, and delet
 **Read the documentation for the fs module here:**
 - [fs](https://nodejs.org/api/fs.html)
 
-### Links
-
-**Make sure you look at the links below before class!! :smile:**
-
-#### Node
-- [Node.js Guide](https://nodejs.org/en/docs/guides/)
-- [NOde NPM Guide](https://nodejs.dev/en/learn/an-introduction-to-the-npm-package-manager/)
-- [Node.js with Typescript](https://nodejs.dev/en/learn/nodejs-with-typescript/)
-- [Node.js fs file system](https://nodejs.dev/en/api/v19/documentation/)
-- [Using environment variables](https://nodejs.dev/en/learn/how-to-read-environment-variables-from-nodejs)
-  - [dotenv](https://www.npmjs.com/package/dotenv)
-
-
-#### Express
-- [Express](https://expressjs.com/)
-
 ***
 
-### Exercises
-
-Before we start with `express` we're going to use Node.js to create a simple server. Express is built on top of Node.js, 
-so it's important to understand how Node.js works before we start using Express. 
-
-**Remember to read the** [Node.js Guide](https://nodejs.org/en/docs/guides/) before you start. 
-**Reading the documentation is an important part of learning how to use a new tool!**
-
-#### How to create a new Node.js projectwith Typescript
+#### How to create a new Node.js project with Typescript
 
 1. The first step is to create a new Node.js project. You can do this by creating a new directory and running `npm init -y`.
 
@@ -255,6 +247,14 @@ logger.fatal('Some fatal messages');
 
 It would be a good idea to create a `logger.ts` file in the `src` folder and export the logger from this file.
 
+### Exercises
+
+Before we start with `express` we're going to use Node.js to create a simple server. Express is built on top of Node.js,
+so it's important to understand how Node.js works before we start using Express.
+
+**Remember to read the** [Node.js Guide](https://nodejs.org/en/docs/guides/) or one of the other documentations whenever you are in doubt.
+**Reading the documentation is an important part of learning how to use a new tool!**
+
 #### 1. Create a simple Node.js server
 
 In this exercise I want you to create a simple Node.js web server that listens on port 3000. 
@@ -272,8 +272,6 @@ In this exercise I want you to create a simple Node.js web server that listens o
   - the list should be sorted either by date or by severity.
 6. The data route should return a JSON object. [JSON Object](https://gist.github.com/tysker/1ebc990181fb31ab97306521fd36771a)
 7. The date route should return a date and time from the url query string. `date?year=2022&month=11&day=30&hour=12&minute=30&second=30`. Use the `url` module to parse the query string.
-
-
 
 
 #### 2. Create a simple Express server
