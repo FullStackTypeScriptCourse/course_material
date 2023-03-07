@@ -203,7 +203,7 @@ Example:
 PORT=3000
 ```
 
-**Don't forget to add the `.env` file to your `.gitignore` file and don't add single quotes around the values. Another thing to rembember to add to the gitignore file is the `dist` and `node_module` folder.**
+**Don't forget to add the `.env` file to your `.gitignore` file and don't add single quotes around the values. Another thing to remember to add to the gitignore file is the `dist` and `node_module` folder.**
 
 7. To access the environment variables we can import the `dotenv` package and call the `config()` method. 
   - Remember that you have to call the `config()` method before you can access the environment variables.
@@ -218,11 +218,60 @@ dotenv.config({path:'PATH OF YOUR ENV FILE'});
 
 8. The only thing left now is to create a `src` folder and a `index.ts` file in this folder.
 
+
+#### log4js
+
+I want you to use the `log4js` package to log messages to the console and write the most servere errors to a file. [log4js doc](https://log4js-node.github.io/log4js-node/).
+
+How to install the package:
+
+```bash
+npm install log4js
+```
+
+How to use the package:
+
+```typescript
+import * as log4js from 'log4js';
+
+log4js.configure({
+  appenders: {
+    out: { type: 'stdout' },
+    app: { type: 'file', filename: 'app.log' }
+  },
+  categories: {
+    default: { appenders: ['out', 'app'], level: 'debug' }
+  }
+});
+
+const logger = log4js.getLogger('default');
+
+logger.debug('Some debug messages');
+logger.info('Some info messages');
+logger.warn('Some warning messages');
+logger.error('Some error messages');
+logger.fatal('Some fatal messages');
+```
+
+It would be a good idea to create a `logger.ts` file in the `src` folder and export the logger from this file.
+
 #### 1. Create a simple Node.js server
 
 In this exercise I want you to create a simple Node.js web server that listens on port 3000. 
 
 1. The first step is to create a new Node.js project. See the instructions above for how to do this.
+2. Create a couple of routes.
+   - home route `/`
+   - about route `/about`
+   - logger route `/logger`
+   - data route `/data`
+   - date route `/date`
+3. The home route should return a simple HTML page with a title and a couple of links to the other routes.
+4. The about route should return a simple HTML page with a title and a couple of paragraphs.
+5. The logger route should return an HTML with a title and a sorted list of all the log messages.
+  - the list should be sorted either by date or by severity.
+6. The data route should return a JSON object. [JSON Object](https://gist.github.com/tysker/1ebc990181fb31ab97306521fd36771a)
+7. The date route should return a date and time from the url query string. `date?year=2022&month=11&day=30&hour=12&minute=30&second=30`. Use the `url` module to parse the query string.
 
 
 
