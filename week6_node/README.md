@@ -181,14 +181,20 @@ npx tsc --init
 ]
 ```
 
-5. Most of the time we have to deal with environment variables. To make this easier we can use the `dotenv` package. 
+5. The only thing left now is to create a `src` folder and a `index.ts` file in this folder.
+
+***
+
+### Environment variables
+
+Most of the time we have to deal with environment variables. To make this easier we can use the `dotenv` package. 
 Install the package with the following command:
 
 ```bash 
 npm install dotenv
 ```
 
-6. Create a `.env` file in the root of your project. This file will contain all the environment variables for your project.
+1. Create a `.env` file in the root of your project. This file will contain all the environment variables for your project.
 
 Example:
 ```bash
@@ -197,7 +203,7 @@ PORT=3000
 
 **Don't forget to add the `.env` file to your `.gitignore` file and don't add single quotes around the values. Another thing to remember to add to the gitignore file is the `dist` and `node_module` folder.**
 
-7. To access the environment variables we can import the `dotenv` package and call the `config()` method. 
+2. To access the environment variables we can import the `dotenv` package and call the `config()` method. 
   - Remember that you have to call the `config()` method before you can access the environment variables.
   - The `config()` method takes an object as an argument. In this object you can specify the path to your `.env` file.
   - If you don't specify the path to your `.env` file, the `config()` method will look for a `.env` file in the root of your project.
@@ -208,8 +214,7 @@ import * as dotenv from 'dotenv';
 dotenv.config({path:'PATH OF YOUR ENV FILE'});
 ```
 
-8. The only thing left now is to create a `src` folder and a `index.ts` file in this folder.
-
+***
 
 #### log4js
 
