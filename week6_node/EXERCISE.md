@@ -27,6 +27,7 @@ NPM packages you will need to install:
 
 Look also at a specific middleware called `cors` that you can use to allow cross-origin requests.
 
+Remember to use the `dotenv` package to store your environment variables and the `morgan` package to log the requests to the console. Also remember to use `log4js` for logging.
 
 ### Middleware
 
@@ -36,20 +37,12 @@ You will be using the following middleware:
 
 - `express.json()` - parses the request body as JSON
 - `morgan` - logs the request to the console
-- `cors` - allows cross-origin requests
 
 Example of using middleware:
 
 ```js   
-const express = require('express');
-const app = express();
-
-app.use(express.json());
-app.use(morgan('dev'));
-app.use(cors());
-
 // is adding a timestamp to the request object
-app.use((req,res, next) => {
+app.use((req,res, next) => { // middelware
     req.requestTime = new Date().toISOString();
     next();
 });
@@ -68,5 +61,6 @@ app.get("/", (req, res) => {
 
 ```
 
-### Bonus
+We haven't covered middleware yet in details, but you can read more about it [here](https://expressjs.com/en/guide/using-middleware.html).
+Next week we will be covering middleware in more details.
 
