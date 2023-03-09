@@ -254,7 +254,7 @@ logger.fatal('Some fatal messages');
 
 It would be a good idea to create a `logger.ts` file in the `src` folder and export the logger from this file.
 
-### Exercises
+### Class Exercises
 
 Before we start with `express` we're going to use Node.js to create a simple server. Express is built on top of Node.js,
 so it's important to understand how Node.js works before we start using Express.
