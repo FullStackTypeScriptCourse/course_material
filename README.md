@@ -11,7 +11,7 @@
 | 3 | 15/02/2023     | [Typescript 1](week3_ts/README.md)                                         | transpiler, autotranspile, tsconfig, type, interface, class             | THA |
 | 4 | 22/02/2023     | [Typescript 2](week4_ts2/README.md)                                        | Using typescript in a react project                                     | THA |
 | 5 | 01/03/2023     | Group Project 1                                                            | Define Project. Write API documentation, Frontend Mockup (Figma).       | JORG/THA |
-| 6 | 08/03/2023 | [NodeJS/Express 1](week6_node/README.md)                                     | Node.js: Read & Write to files, enviroment variables, server, REST API  | JORG |
+| 6 | 08/03/2023 | [NodeJS/Express 1](week6_node/README.md) && [Exercise](week6_node/EXERCISE.md)                   | Node.js: Read & Write to files, enviroment variables, server, REST API  | JORG |
 | 7 | 15/03/2023     | Express 2 - Middlewares                                                    |                                                                         | JORG |
 | 8 | 22/03/2023     | Mongo/Mongoose                                                             |                                                                         | JORG |
 | 9 | 29/03/2023     | [GraphQL](week9_graphql/README.md)                                         |                                                                         | THA |
