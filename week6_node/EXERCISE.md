@@ -25,8 +25,6 @@ NPM packages you will need to install:
 - `nodemon` // development
 - `dotenv` // environment variables
 
-Look also at a specific middleware called `cors` that you can use to allow cross-origin requests.
-
 Remember to use the `dotenv` package to store your environment variables and the `morgan` package to log the requests to the console. Also remember to use `log4js` for logging.
 
 ### Middleware
