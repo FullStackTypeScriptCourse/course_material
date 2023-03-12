@@ -4,7 +4,7 @@
     This is a work in progress. I will be adding more content to this document as we go along.**
 
 **!!! warning
-    Until next class you need to have signed up for a MongoDB Atlas account. You can find the link in the `Link` section.**
+    Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section below.**
 
 ## ExpressMiddleware (from the express docs)
 
