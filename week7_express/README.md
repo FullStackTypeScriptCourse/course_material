@@ -1,5 +1,11 @@
 # Express Middleware, Error Handling and MongoDB/mongoose
 
+**!!! warning
+    This is a work in progress. I will be adding more content to this document as we go along.**
+
+**!!! warning
+    Until next class you need to have signed up for a MongoDB Atlas account. You can find the link in the `Link` section.**
+
 ## ExpressMiddleware (from the express docs)
 
 Express is in its self a routing and middleware web framework that has minimal functionality of its own: 
@@ -31,6 +37,27 @@ An Express application can use the following types of middleware:
 ***
 
 ## Express Error Handling
+
+Error handling in Express is done through the use of middleware. The error-handling middleware is defined with four 
+arguments instead of the usual three: (err, req, res, next). For example:
+
+```js
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
+```
+
+The error-handling middleware always takes four arguments. You must provide four arguments to identify it as an 
+error-handling middleware function. Even if you don’t need to use the next object, you must specify it to maintain the 
+signature. Otherwise, the next object will be interpreted as regular middleware and will fail to handle errors.
+
+If you define multiple error-handling middleware functions, they are executed sequentially, just like regular middleware 
+functions. The first error-handling middleware function that calls next() will transfer control to the next error-handling
+middleware function. If no error-handling middleware function calls next(), the default Express error handler will be
+invoked, which simply returns an Internal Server Error (500) status code to the client.
+
+Read the docs for more info: https://expressjs.com/en/guide/error-handling.html
 
 ***
 
@@ -130,33 +157,21 @@ Overall, MongoDB and Mongoose serve different purposes. MongoDB is a powerful No
 that provides a flexible and scalable platform for storing and querying data. Mongoose is a library that provides a 
 higher-level, schema-based API for working with MongoDB, making it easier to define and interact with MongoDB documents.
 
+***
 
+## Links
 
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Links
-
-- [Express Middleware](https://expressjs.com/en/resources/middleware.html)
+**Express Middleware**
 - [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
+- [Express Middleware Documentation](https://expressjs.com/en/resources/middleware.html)
 
+**Error Handling**
+- [Error Handling in Express](https://expressjs.com/en/guide/error-handling.html)
+- [Express Error Handling Middleware Example](https://expressjs.com/en/resources/middleware/errorhandler.html)
+  
+**MongoDB**
+- [MongoDB Atlas](https://www.mongodb.com/atlas)
+- [Learn MongoDB](http://learnmongodbthehardway.com/schema/)
+
+**Mongoose**
+- [Mongoose Documentation](https://mongoosejs.com/)
