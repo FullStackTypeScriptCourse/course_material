@@ -190,6 +190,24 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 
 ***
 
+## Class Exercises 1 
+
+ - Clone the [repo](https://github.com/FullStackTypeScriptCourse/fullstack_backend_startcode) and install the dependencies 
+ - Refactor the code as explained in class. Look at the model above for guidance.
+- Add some dummy data to an array in your controller. User the Person data from the last two exercises.
+- Add the following routes to your controller:
+    - GET /api/v1/persons - returns all persons
+    - GET /api/v1/persons/:id - returns a single person
+    - POST /api/v1/persons - creates a new person
+    - PATCH /api/v1/persons/:id - updates a person(partially)
+    - DELETE /api/v1/persons/:id - deletes a person
+- Remember the following:
+    - try/catch blocks
+    - logging af errors
+
+
+***
+
 ## Links
 
 **Express Middleware**
@@ -206,3 +224,5 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 
 **Mongoose**
 - [Mongoose Documentation](https://mongoosejs.com/)
+
+
