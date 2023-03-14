@@ -8,7 +8,7 @@
 
 ## Refactoring 
 
-Last time around we had all logic in one file. This time around we will be refactoring to make our code more modular.
+Last time around we had all logic in one file. Today we will be refactoring to make our code more modular.
 When we are done we will have the following files and structure:
 
 ```mermaid

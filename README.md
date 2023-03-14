@@ -28,6 +28,15 @@
 
 
 ***
+
+## Links
+
+- [Moodle](https://cphbusiness.mrooms.net/course/view.php?id=11091)
+- [Backend StartCode](https://github.com/FullStackTypeScriptCourse/fullstack_backend_startcode)
+
+
+***
+
 ## Hand-in and Exam.
 1. Create a GitHub repo for all your work in this course and link to it [here](https://docs.google.com/spreadsheets/d/1IKFYbYwqUlZ0sUaFcLaxl154NgoaRl0g57yY6k3ipo0/edit?usp=sharing)
 2. The repo should contain a folder for each week. Each folder should contain a README.md file with the answers to the exercises.

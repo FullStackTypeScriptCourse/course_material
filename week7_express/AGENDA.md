@@ -7,7 +7,13 @@
 - Express Router
 - Express Error Handling
 - Refactoring of last week's code
-- 
+
+
+1. Refactoring of last week's code
+
+   - [ ] Create a new folder called `week7_express`
+   - [ ] Create a new project called `week7_express`
+   - 
 
 ### Express Middleware
 
