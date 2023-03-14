@@ -204,7 +204,7 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 - Remember the following:
     - try/catch blocks
     - logging af errors
-
+- Use Postman to test your routes
 
 ***
 
