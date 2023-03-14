@@ -6,6 +6,37 @@
 **!!! warning
     Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section below.**
 
+## Refactoring 
+
+Last time around we had all logic in one file. This time around we will be refactoring to make our code more modular.
+When we are done we will have the following files and structure:
+
+```mermaid
+graph LR
+A[server.js] --> B[app.js]
+B --> C[router.js]
+C --> D[controller.js]
+```
+
+### server.js
+
+The server.js file will be responsible for starting the server and connect to our database.
+
+### app.js
+
+The app.js file will be responsible for setting up our express application. This includes setting up our middleware and routes.
+
+### router.js
+
+The router.js file will be responsible for setting up our routes. This includes setting up our routes and the controller 
+functions that will be called when a route is hit.
+
+### controller.js
+
+The controller.js file will be responsible for handling the logic for each route. This includes reading and writing to the database.
+
+    
+
 ## ExpressMiddleware (from the express docs)
 
 Express is in its self a routing and middleware web framework that has minimal functionality of its own: 
