@@ -1,7 +1,5 @@
 # Express Middleware, Error Handling and MongoDB/mongoose
 
-**!!! warning
-This is a work in progress. I will be adding more content to this document as we go along.**
 
 **!!! warning
 Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section
@@ -184,6 +182,35 @@ MongoDB queries, making it easier to write complex queries.
 Overall, Mongoose is a powerful and flexible library that simplifies working with MongoDB in a Node.js application.
 It provides a higher-level, schema-based API that can improve productivity and maintainability of your code.
 
+### Schemas
+
+In Mongoose, a schema is a blueprint or a structure that defines the shape and organization of documents in a MongoDB collection.
+
+A Mongoose schema defines the fields, data types, and validation rules for the documents that will be stored in a collection. 
+It is essentially a way of defining a specific data model for a MongoDB collection.
+
+Here's an example of a simple Mongoose schema definition for a blog post:
+
+```JS
+const mongoose = require('mongoose');
+
+const postSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  content: { type: String, required: true },
+  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  createdAt: { type: Date, default: Date.now }
+});
+
+module.exports = mongoose.model('Post', postSchema);
+
+```
+In this example, the `postSchema` defines a `Post` model with four fields: `title`, `content`, `author`, and `createdAt`. 
+The `title` and `content` fields are required strings, the `author` field is a reference to a `User` model, and the `createdAt` 
+field is a date that defaults to the current time.
+
+Once a Mongoose schema has been defined, it can be used to create and manipulate documents in a MongoDB collection 
+using Mongoose's API.
+
 ### Key differences between Mongoose and MongoDB
 
 MongoDB and Mongoose are two different things that serve different purposes. MongoDB is a NoSQL document-oriented
@@ -209,7 +236,7 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 
 ***
 
-## Class Exercises 1
+## Class Exercises 1 Refactoring
 
 - Clone the [repo](https://github.com/FullStackTypeScriptCourse/fullstack_backend_startcode) and install the
   dependencies
@@ -266,6 +293,53 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
     - try/catch blocks
     - logging af errors
 - Use Postman to test your routes
+
+***
+
+## Class Exercises 2 MongoDB
+
+1. Create a MongoDB database on [MongoDB Atlas](https://www.mongodb.com/atlas)
+2. Create a new project and add a new cluster
+3. Go to the network access tab and add your IP address or add `0.0.0.0./0` to have access from anywhere.
+4. Go to the database access tab and add a new user
+5. Go to the database tab and create a new database. Choose `MO(FREE)` as the cloud provider and `Stockholm (eu-north-1)` as the
+   region. Name the database `fullstack`.
+6. At the next step you will be asked to create a username and password for the database. Choose a username and password
+   and click `Create User`. Remember to save the username and password. 
+7. Choose `My Local Environment` as the connection method and click `Connect`.
+8. In your `config.env` file create the following environment variables:
+   - DATABASE_DEV=
+   - DATABASE_PROD=
+   - DATABASE_USERNAME= 
+   - DATABASE_PASSWORD=
+9. Copy the connection string from MongoDB Atlas and paste it into the `DATABASE_DEV` environment variable. Replace the
+   `<password>` with the password you created in step 6.
+10. Copy the connection string from MongoDB Atlas and paste it into the `DATABASE_PROD` environment variable. Replace the
+    `<password>` with the password you created in step 6. (That step is not necessary if you are not deploying your app)
+11. Now we are ready to connect to our database. In your `server.ts` file import the `mongoose` package and connect to the
+    database. Remember to use the `DATABASE_DEV` environment variable. To connect to the database use the following code:
+
+```typescript
+const DB = process.env.DATABASE_DEV!.replace(
+    '<PASSWORD>',
+    process.env.DATABASE_PASSWORD!,
+);
+
+mongoose.connect(DB, {
+}).then(() => console.log('DB connection successful!'));
+```
+
+12. We need to create a new model for our cars. Create a new file called `carModel.ts` in the `models` folder. In this file
+    we will create a new Mongoose schema for our cars. The schema should have the following fields:
+    - model: string (required, trim, maxlength: 20, minlength: 5), 
+    - year: number
+    - price: number
+    - color: string (enum: red, blue, green, black, white)
+    - createdAt: date
+13. Now we need to replace the dummy data in our controller with data from our database. In your `carController.ts` file
+    import the `Car` model and use the `find()` method to get all cars from the database. (Remember to use `await` when you call the `find()` method)
+14. Replace the methods from exercise 1 with database methods. Remember to use `await` when you call the database methods.
+15. Test your routes with Postman
 
 ***
 
