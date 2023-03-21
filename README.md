@@ -13,7 +13,7 @@
 | 5 | 01/03/2023     | Group Project 1                                                                  | Define Project. Write API documentation, Frontend Mockup (Figma).       | JORG/THA |
 | 6 | 08/03/2023 | [NodeJS/Express 1](week6_node/README.md) && [Exercise](week6_node/EXERCISE.md)   | Node.js: Read & Write to files, enviroment variables, server, REST API  | JORG |
 | 7 | 15/03/2023     | [Middleware & Error handling & Refactoring & MongoDB ](week7_express/README.md)  |                                                                         | JORG |
-| 8 | 22/03/2023     | [MongoDB Data Modelling](week7_express/README.md)                                                       |                                                                         | JORG |
+| 8 | 22/03/2023     | [MongoDB Data Modelling](week8_data_modelling/README.md)                                                       |                                                                         | JORG |
 | 9 | 29/03/2023     | [GraphQL](week9_graphql/README.md)                                               |                                                                         | THA |
 | 10 | 05/04/2023     | Group Project 2                                                                  | Backend project                                                         | JORG/THA |
 | 11 | 12/04/2023     | [React 1](week11_state_management/README.md)                                     | State management                                                        | THA |
