@@ -186,7 +186,7 @@ It provides a higher-level, schema-based API that can improve productivity and m
 
 In Mongoose, a schema is a blueprint or a structure that defines the shape and organization of documents in a MongoDB collection.
 
-A Mongoose schema defines the fields, data types, and validation rules for the documents that will be stored in a collection. 
+A Mongoose schema defines the fields, data types, and validation rules for the documents that will be stored in a collection.
 It is essentially a way of defining a specific data model for a MongoDB collection.
 
 Here's an example of a simple Mongoose schema definition for a blog post:
@@ -204,11 +204,11 @@ const postSchema = new mongoose.Schema({
 module.exports = mongoose.model('Post', postSchema);
 
 ```
-In this example, the `postSchema` defines a `Post` model with four fields: `title`, `content`, `author`, and `createdAt`. 
-The `title` and `content` fields are required strings, the `author` field is a reference to a `User` model, and the `createdAt` 
+In this example, the `postSchema` defines a `Post` model with four fields: `title`, `content`, `author`, and `createdAt`.
+The `title` and `content` fields are required strings, the `author` field is a reference to a `User` model, and the `createdAt`
 field is a date that defaults to the current time.
 
-Once a Mongoose schema has been defined, it can be used to create and manipulate documents in a MongoDB collection 
+Once a Mongoose schema has been defined, it can be used to create and manipulate documents in a MongoDB collection
 using Mongoose's API.
 
 ### Key differences between Mongoose and MongoDB
@@ -284,14 +284,14 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 ```
 
 - Add the following routes to your controller:
-    - GET /api/v1/cars - returns all cars
-    - GET /api/v1/cars/:id - returns a single cars
-    - POST /api/v1/cars - creates a new cars
-    - PATCH /api/v1/cars/:id - updates a cars(partially)
-    - DELETE /api/v1/cars/:id - deletes a cars
+  - GET /api/v1/cars - returns all cars
+  - GET /api/v1/cars/:id - returns a single cars
+  - POST /api/v1/cars - creates a new cars
+  - PATCH /api/v1/cars/:id - updates a cars(partially)
+  - DELETE /api/v1/cars/:id - deletes a cars
 - Remember the following:
-    - try/catch blocks
-    - logging af errors
+  - try/catch blocks
+  - logging af errors
 - Use Postman to test your routes
 
 ***
@@ -305,13 +305,13 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 5. Go to the database tab and create a new database. Choose `MO(FREE)` as the cloud provider and `Stockholm (eu-north-1)` as the
    region. Name the database `fullstack`.
 6. At the next step you will be asked to create a username and password for the database. Choose a username and password
-   and click `Create User`. Remember to save the username and password. 
+   and click `Create User`. Remember to save the username and password.
 7. Choose `My Local Environment` as the connection method and click `Connect`.
 8. In your `config.env` file create the following environment variables:
-   - DATABASE_DEV=
-   - DATABASE_PROD=
-   - DATABASE_USERNAME= 
-   - DATABASE_PASSWORD=
+  - DATABASE_DEV=
+  - DATABASE_PROD=
+  - DATABASE_USERNAME=
+  - DATABASE_PASSWORD=
 9. Copy the connection string from MongoDB Atlas and paste it into the `DATABASE_DEV` environment variable. Replace the
    `<password>` with the password you created in step 6.
 10. Copy the connection string from MongoDB Atlas and paste it into the `DATABASE_PROD` environment variable. Replace the
@@ -331,11 +331,11 @@ mongoose.connect(DB, {
 
 12. We need to create a new model for our cars. Create a new file called `carModel.ts` in the `models` folder. In this file
     we will create a new Mongoose schema for our cars. The schema should have the following fields:
-    - model: string (required, trim, maxlength: 20, minlength: 5), 
-    - year: number
-    - price: number
-    - color: string (enum: red, blue, green, black, white)
-    - createdAt: date
+  - model: string (required, trim, maxlength: 20, minlength: 5),
+  - year: number
+  - price: number
+  - color: string (enum: red, blue, green, black, white)
+  - createdAt: date
 13. Now we need to replace the dummy data in our controller with data from our database. In your `carController.ts` file
     import the `Car` model and use the `find()` method to get all cars from the database. (Remember to use `await` when you call the `find()` method)
 14. Replace the methods from exercise 1 with database methods. Remember to use `await` when you call the database methods.
@@ -364,4 +364,11 @@ mongoose.connect(DB, {
 
 - [Mongoose Documentation](https://mongoosejs.com/)
 
+**Error Handling Videos**
 
+1. [Postman Environment Variables](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2a62ff5c-7ad5-4d73-9022-afcb007c5752)
+2. [Error-Undefined Routes](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6ee6e853-01bc-4f5a-af62-afcb008d1628)
+3. [Error-Global Error Handler](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=186c18ce-9a61-402d-9ac7-afcb00d13dfa)
+4. [Error: Refactoring](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b1f9d423-8292-42b2-bdf6-afcb00e1910c)
+5. [Catch Async](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b3ff51de-22b3-4e0f-8806-afcb012cae02)
+6. [IsOperational](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a4f430e3-c362-4783-a710-afcc00bf864b)
