@@ -43,8 +43,55 @@ directly within the main document.
 
 ## Referenced / Normalized
 
+Positive:
+- Performance. It's easier to query the data. We only need to query the data from the referenced document.
+
+Negative:
+
+- We need to keep the data in sync.
+- We need to make sure that the data is not duplicated.
+- We need to make sure that the data is not deleted.
+- We need to make sure that the data is not updated.
+- We need 2 queries to get the data from the referenced document.
+
 ![img.png](img.png)
 
 ## Embedded / Denormalized
 
+Positive:
+
+- Performance. We can get all the information we need in one query.
+
+Negative:
+
+- More data in one document
+- More data to transfer
+- More data to store
+- Impossible to query the embedded data without the main document
+
 ![img_1.png](img_1.png)
+
+
+## When to use Embedded vs Referenced
+
+The decision of whether to use embedded or referenced relationships when modeling a database in MongoDB depends on several factors, such as:
+
+1. Query patterns: If your application needs to retrieve related data frequently and the related data is relatively large, it might be better to use embedded relationships to avoid the overhead of multiple queries. 
+2. Data consistency: If the related data needs to be updated frequently, it might be better to use referenced relationships to avoid duplicating data in multiple places and ensure data consistency. 
+3. Data volume: If the related data is relatively small and the main document has a large volume of data, it might be better to use referenced relationships to avoid bloating the main document. 
+4. Data structure: If the related data has a complex structure, it might be better to use referenced relationships to avoid complex nested data structures.
+
+In general, embedded relationships work best when the related data is small and frequently accessed together with the 
+main document, while referenced relationships work best when the related data is large, frequently updated, or accessed 
+independently of the main document.
+
+It's important to note that there is no one-size-fits-all solution and the decision to use embedded or referenced 
+relationships should be made based on the specific requirements of the application and the data being modeled.
+
+![img_2.png](img_2.png)
+
+## Types of referencing
+
+- child referencing
+- parent referencing
+- two-way referencing
