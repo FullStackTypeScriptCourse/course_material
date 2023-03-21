@@ -76,10 +76,10 @@ Negative:
 
 The decision of whether to use embedded or referenced relationships when modeling a database in MongoDB depends on several factors, such as:
 
-1. Query patterns: If your application needs to retrieve related data frequently and the related data is relatively large, it might be better to use embedded relationships to avoid the overhead of multiple queries. 
-2. Data consistency: If the related data needs to be updated frequently, it might be better to use referenced relationships to avoid duplicating data in multiple places and ensure data consistency. 
-3. Data volume: If the related data is relatively small and the main document has a large volume of data, it might be better to use referenced relationships to avoid bloating the main document. 
-4. Data structure: If the related data has a complex structure, it might be better to use referenced relationships to avoid complex nested data structures.
+1. **Query patterns:** If your application needs to retrieve related data frequently and the related data is relatively large, it might be better to use embedded relationships to avoid the overhead of multiple queries. 
+2. **Data consistency:** If the related data needs to be updated frequently, it might be better to use referenced relationships to avoid duplicating data in multiple places and ensure data consistency. 
+3. **Data volume:** If the related data is relatively small and the main document has a large volume of data, it might be better to use referenced relationships to avoid bloating the main document. 
+4. **Data structure:** If the related data has a complex structure, it might be better to use referenced relationships to avoid complex nested data structures.
 
 In general, embedded relationships work best when the related data is small and frequently accessed together with the 
 main document, while referenced relationships work best when the related data is large, frequently updated, or accessed 
@@ -90,8 +90,41 @@ relationships should be made based on the specific requirements of the applicati
 
 ![img_2.png](img_2.png)
 
+
 ## Types of referencing
 
 - child referencing
 - parent referencing
 - two-way referencing
+
+In MongoDB, there are three types of relationships that can be established between documents: child referencing, parent 
+referencing, and two-way referencing.
+
+1. **Child referencing:** In child referencing, the child document contains a reference to its parent document. 
+This is useful when you need to represent a one-to-many relationship, where multiple child documents are associated with 
+a single parent document. For example, a blog post document might have multiple comment documents, and each comment 
+document would contain a reference to the parent blog post document.
+2. **Parent referencing:** In parent referencing, the parent document contains a reference to its child document(s). 
+This is useful when you need to represent a many-to-one relationship, where multiple child documents are associated with 
+a single parent document. For example, a customer document might have multiple order documents, and each order document 
+would contain a reference to the parent customer document.
+3. Two-way referencing: In two-way referencing, both the parent and child documents contain references to each other. 
+This is useful when you need to represent a many-to-many relationship, where multiple child documents are associated 
+with multiple parent documents. For example, a user document might have multiple favorite book documents, and each 
+book document would contain references to the parent user documents, creating a two-way referencing relationship.
+
+The choice between child referencing, parent referencing, and two-way referencing depends on the specific requirements 
+of the application and the data being modeled. It's important to consider the query patterns, data consistency, and data 
+volume when deciding on the type of relationship to use.
+
+## Child referencing
+
+![img_3.png](img_3.png)
+
+## Parent referencing
+
+![img_4.png](img_4.png)
+
+## Two-way referencing
+
+![img_5.png](img_5.png)
