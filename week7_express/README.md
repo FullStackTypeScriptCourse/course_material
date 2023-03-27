@@ -5,6 +5,38 @@
 Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section
 below.**
 
+## Links
+
+**Express Middleware**
+
+- [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
+- [Express Middleware Documentation](https://expressjs.com/en/resources/middleware.html)
+
+**Error Handling**
+
+- [Error Handling in Express](https://expressjs.com/en/guide/error-handling.html)
+- [Express Error Handling Middleware Example](https://expressjs.com/en/resources/middleware/errorhandler.html)
+
+**MongoDB**
+
+- [MongoDB Atlas](https://www.mongodb.com/atlas)
+- [Learn MongoDB](http://learnmongodbthehardway.com/schema/)
+
+**Mongoose**
+
+- [Mongoose Documentation](https://mongoosejs.com/)
+
+**Error Handling Videos**
+
+1. [Postman Environment Variables](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2a62ff5c-7ad5-4d73-9022-afcb007c5752)
+2. [Error-Undefined Routes](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6ee6e853-01bc-4f5a-af62-afcb008d1628)
+3. [Error-Global Error Handler](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=186c18ce-9a61-402d-9ac7-afcb00d13dfa)
+4. [Error: Refactoring](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b1f9d423-8292-42b2-bdf6-afcb00e1910c)
+5. [Catch Async](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b3ff51de-22b3-4e0f-8806-afcb012cae02)
+6. [IsOperational](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a4f430e3-c362-4783-a710-afcc00bf864b)
+
+***
+
 ## Refactoring
 
 Last time around we had all logic in one file. Today we will be refactoring to make our code more modular.
@@ -342,33 +374,3 @@ mongoose.connect(DB, {
 15. Test your routes with Postman
 
 ***
-
-## Links
-
-**Express Middleware**
-
-- [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
-- [Express Middleware Documentation](https://expressjs.com/en/resources/middleware.html)
-
-**Error Handling**
-
-- [Error Handling in Express](https://expressjs.com/en/guide/error-handling.html)
-- [Express Error Handling Middleware Example](https://expressjs.com/en/resources/middleware/errorhandler.html)
-
-**MongoDB**
-
-- [MongoDB Atlas](https://www.mongodb.com/atlas)
-- [Learn MongoDB](http://learnmongodbthehardway.com/schema/)
-
-**Mongoose**
-
-- [Mongoose Documentation](https://mongoosejs.com/)
-
-**Error Handling Videos**
-
-1. [Postman Environment Variables](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2a62ff5c-7ad5-4d73-9022-afcb007c5752)
-2. [Error-Undefined Routes](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6ee6e853-01bc-4f5a-af62-afcb008d1628)
-3. [Error-Global Error Handler](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=186c18ce-9a61-402d-9ac7-afcb00d13dfa)
-4. [Error: Refactoring](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b1f9d423-8292-42b2-bdf6-afcb00e1910c)
-5. [Catch Async](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b3ff51de-22b3-4e0f-8806-afcb012cae02)
-6. [IsOperational](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a4f430e3-c362-4783-a710-afcc00bf864b)
