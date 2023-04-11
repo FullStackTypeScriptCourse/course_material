@@ -28,7 +28,6 @@
 
 ## Demo
 1. Create a new folder called `graphql-demo` and from inside it run `npm init -y` to create a new project and `npx tsc --init`.
-2. Follow instructions from step 2 in this guide: https://www.apollographql.com/docs/apollo-server/getting-started.
 2. Install dev dependencies: `npm i -D typescript @types/node ts-node-dev nodemon rimraf`.
 3. Install the following dependencies: `npm i @apollo/server graphql express cors dotenv `. To use Apollo Server 4.
 4. Create a new file called `server.ts` inside a src folder and add the code from Step 3-6 in this guide: https://www.apollographql.com/docs/apollo-server/getting-started alternatively you can use express and apollo side by side by using this guide: https://www.apollographql.com/docs/apollo-server/migration.
