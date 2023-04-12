@@ -1,4 +1,7 @@
 # Exercise: GraphQL Backend
+<img src="https://www.encora.com/hs-fs/hubfs/Picture1-Jul-28-2022-04-18-46-78-PM.png?width=983&name=Picture1-Jul-28-2022-04-18-46-78-PM.png" width="300">
+
+
 1. Take you project from last week (the person backend project) and install apollo-server and graphql.
 2. Create a new instance of apollo-server to work with your existing express app as shown [here](https://www.apollographql.com/docs/apollo-server/api/express-middleware/).
 3. Setup schema and resolvers for your Person type. (In the first iteration, you can just return the data from an in-memory array.)

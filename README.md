@@ -16,9 +16,9 @@
 | 8 | 22/03/2023     | [MongoDB Data Modelling](week8_data_modelling/README.md)                                                       |                                          | JORG |
 | 9 | 29/03/2023     | [GraphQL](week9_graphql/README.md)                                               |                                                                         | THA |
 | 10 | 05/04/2023     | Group Project 2                                                                  | Backend project                                                         | JORG/THA |
-| 11 | 12/04/2023     | [React 1](week11_state_management/README.md)                                     | State management                                                        | THA |
-| 12 | 19/04/2023     | [React 2](week12_react_hooks/README.md)                                          | Hooks (lav egne hooks). Recap                                           | THA  |
-| 13 | 26/04/2023     | [React 3](week13_graphql2/README.md) (Frontend GraphQL)                          | Libraries for                                                           | THA |
+| 11 | 12/04/2023     | [React 1](week10_graphql_client/README.md)                                     | State management                                                        | THA |
+| 12 | 19/04/2023     | [React 2](week11_state_management/README.md)                                          | Hooks (lav egne hooks). Recap                                           | THA  |
+| 13 | 26/04/2023     | [React 3](week12_custom_hooks/README.md) (Frontend GraphQL)                          | Libraries for                                                           | THA |
 | 14 | 03/05/2023     | Project 3                                                                        |                                                                         |  |
 | 15 | 10/05/2023     | Project 3                                                                        |                                                                         |  |
 | 16 | 17/05/2023     | Project 3                                                                        |                                                                         |  |
