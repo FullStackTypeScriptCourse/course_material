@@ -1,4 +1,5 @@
 # Weekly exercise: State management with context and reducers
+<img src="https://cdn2.scalablepath.com/_next/image?url=https%3A%2F%2Fcdn-blog.scalablepath.com%2Fuploads%2F2022%2F08%2Fcontext-api-data-flow-management.webp&w=1200&q=75">
 Based on this article:  
 https://frontbackgeek.com/what-is-usereducer-hook-differences-between-usestate-and-usereducer-hooks/  
 and this one:  
