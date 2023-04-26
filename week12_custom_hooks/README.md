@@ -11,6 +11,18 @@
     - Context
 
 ## Agenda
+- Recap of the semester: What is most difficult?
+  - Server
+    - Typescript
+    - Express
+    - Mongoose
+    - GraphQL
+      - Apollo Server
+  - Client
+    - React State management
+      - Context
+    - GraphQL
+      - Apollo Client
 - Typescript
   - ts-node
   - types module to import

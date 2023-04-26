@@ -42,3 +42,31 @@
 2. The repo should contain a folder for each week. Each folder should contain a README.md file with the answers to the exercises.
 3. There should also be a folder for the semester project which you will work on gradually over the course.
 4. All your code in the repo will be used for the exam.
+
+## Semester project requirements
+- The project should be a fullstack typescript project with a frontend and a backend.
+- The project should be deployed to a server.
+- The project should use a mongodb database.
+- The project should use graphql for communication between frontend and backend.
+- The graphql should make use of mutations and queries, that can create and update Models and relations between models.
+- The project should use react for the frontend.
+- The project should use node.js, express, mongoose and apollo server for the backend.
+- The project should use typescript for both frontend and backend.
+- Depending on the size of your group, the project should have a minimum of 3-4 models (more if you are 3-4 people)
+
+### Optional requirements
+- The project could be deployed on a docker container on Digital Ocean.
+- The project could use a CI/CD pipeline for deployment.
+- The project could use a frontend library for routing (react router, etc.)
+- The project could use a frontend library for styling (styled components, material ui, etc.)
+- The project could expose som rest endpoints alongside the graphql endpoint.
+- The project could use JWT for authentication and some of the endpoints could be protected.
+- The frontend could have rolebased routing (admin, user, etc. only visible to logged in users with the correct role).
+- 
+
+## Exam details
+- The exam is primaryly based on your group semester project.
+- The exam is a 30 min **individual** oral exam with no preparation time based on your code (primaryly the semester project)
+- You will be asked to explain and/or extend your code
+- You will be asked questions about the course curriculum
+
