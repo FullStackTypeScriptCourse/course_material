@@ -90,11 +90,10 @@
 - What is a callback function in Node.js and how is it used?
 - What is the difference between "require" and "import" in Node.js?
 - What is the difference between synchronous and asynchronous code in Node.js?
-- What is the purpose of the "middleware" in Node.js?
-- How do you use the "Express" framework in Node.js?
 - What is the "Node Package Manager" (npm) and how is it used in Node.js?
 
 #### Express
+- How do you use the "Express" framework in Node.js?
 - What is middleware in Express and how is it used?
 - What is a router in Express and how is it used?
 - How do you define a route in Express?
@@ -116,8 +115,9 @@
 - How do you update a document in Mongoose?
 - How do you delete a document in Mongoose?
 - How do you define a relationship between two models in Mongoose?
-- How do you populate a document in Mongoose?
-- How do you use the "mongoose-unique-validator" plugin in Mongoose?
+- What is the difference between embedded and referenced relationships in Mongoose?
+- How do you populate a document in Mongoose? With referenced relationships?
+- How do you use the "mongoose-validator" in Mongoose?
 
 #### GraphQL
 - What is GraphQL and how is it different from REST?
@@ -126,10 +126,7 @@
 - What is a mutation in GraphQL?
 - What is a query in GraphQL?
 - What is the difference between a mutation and a query in GraphQL?
-- What is the difference between a scalar type and an object type in GraphQL?
 - What is the difference between a type and an input type in GraphQL?
-- What is the difference between a type and an interface in GraphQL?
-- What is the difference between a type and a union in GraphQL?
 - How do you design a GraphQL query in the GraphQL Playground?
 - How do you design a GraphQL mutation in the GraphQL Playground?
 
