@@ -19,7 +19,11 @@
 3. Create a list of the different endpoints that your app will use.
 4. Design the json data that will be used to communicate between the frontend and backend.
 5. Create a list of the different components that your app will use.
+<<<<<<< HEAD
 6. Setup a json-server to mock the proper json endpoints for your app.
+=======
+6. Setup a json-server to provide the proper json endpoints for your app.
+>>>>>>> 2d3ffb5 (additional commit)
 
 ## Part 2: Create the frontend
 1. Create a new React project using Vite by running the following command:
@@ -27,8 +31,18 @@
 2. Use Figma to design the frontend for your app.
 3. Create the components that you need for your app.
 
+<<<<<<< HEAD
 ## Hand in
 Create a group repo on github and hand in before next class session by uploading your solution to github and fill out this google [form](https://forms.gle/Yzhcp7raAw3d2J53A) with your group name.
+=======
+
+
+
+
+
+## Hand in
+Hand in before next class session by uploading your solution to github and fill out this google [form](https://forms.gle/Yzhcp7raAw3d2J53A) with your details.
+>>>>>>> 2d3ffb5 (additional commit)
 The github repo must contain the following:
 1. README.md file in project root describing your project.
 2. A folder called `src` containing all your source code.

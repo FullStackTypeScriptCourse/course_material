@@ -26,14 +26,12 @@
 | 18 | 30-31/05/2023     | Eksamen                                                                          |                                                                         | |
 |  |                |                                                                                  |                                                                         |  |
 
-
 ***
 
 ## Links
 
 - [Moodle](https://cphbusiness.mrooms.net/course/view.php?id=11091)
 - [Backend StartCode](https://github.com/FullStackTypeScriptCourse/fullstack_backend_startcode)
-
 
 ***
 
