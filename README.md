@@ -43,7 +43,6 @@
 
 ## Semester project requirements
 - The project should be a fullstack typescript project with a frontend and a backend.
-- The project should be deployed to a server.
 - The project should use a mongodb database.
 - The project should use graphql for communication between frontend and backend.
 - The graphql should make use of mutations and queries, that can create and update Models and relations between models.
