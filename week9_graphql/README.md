@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Week 9: GraphQL
 
 ## Objectives
