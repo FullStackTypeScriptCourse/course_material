@@ -26,14 +26,12 @@
 | 18 | 30-31/05/2023     | Eksamen                                                                          |                                                                         | |
 |  |                |                                                                                  |                                                                         |  |
 
-
 ***
 
 ## Links
 
 - [Moodle](https://cphbusiness.mrooms.net/course/view.php?id=11091)
 - [Backend StartCode](https://github.com/FullStackTypeScriptCourse/fullstack_backend_startcode)
-
 
 ***
 
@@ -45,7 +43,6 @@
 
 ## Semester project requirements
 - The project should be a fullstack typescript project with a frontend and a backend.
-- The project should be deployed to a server.
 - The project should use a mongodb database.
 - The project should use graphql for communication between frontend and backend.
 - The graphql should make use of mutations and queries, that can create and update Models and relations between models.
