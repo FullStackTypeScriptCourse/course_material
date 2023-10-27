@@ -1,4 +1,4 @@
-# Week 4: Typescript 2
+# Course day 4: Typescript 2
 
 
 ## Objectives

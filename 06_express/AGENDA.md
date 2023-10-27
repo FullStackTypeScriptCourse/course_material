@@ -6,13 +6,13 @@
 - 3rd party middleware like morgan, cors, cookie-parser
 - Express Router
 - Express Error Handling
-- Refactoring of last week's code
+- Refactoring of last Course day's code
 
 
-1. Refactoring of last week's code
+1. Refactoring of last Course day's code
 
-    - [ ] Create a new folder called `week7_express`
-    - [ ] Create a new project called `week7_express`
+    - [ ] Create a new folder called `Course day7_express`
+    - [ ] Create a new project called `Course day7_express`
     -
 
 ### Express Middleware

@@ -1,4 +1,4 @@
-# Week 3: Typescript 1
+# Course day 3: Typescript 1
 structurally typed type system 
 
 ## Objectives

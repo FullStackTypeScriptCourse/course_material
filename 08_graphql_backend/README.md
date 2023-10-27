@@ -1,4 +1,4 @@
-# Week 9: GraphQL
+# Course day 9: GraphQL
 
 ## Objectives
 - Understand the benefit of graphql over traditional REST APIs
@@ -164,7 +164,7 @@ const resolvers = {
 - Create a resolver for each of the fields in the Mutation type.
 - Create a resolver for each of the fields in the Subscription type.
 =======
-# Week 4: Typescript 2
+# Course day 4: Typescript 2
 
 ## Objectives
 

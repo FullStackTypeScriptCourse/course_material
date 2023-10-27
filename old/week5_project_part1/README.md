@@ -1,4 +1,4 @@
-# Week 5: Semester project part 1: React and Typescript
+# Course day 5: Semester project part 1: React and Typescript
 
 ## Objectives
 - Deepen your understanding of typescript and react

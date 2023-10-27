@@ -1,4 +1,4 @@
-# Week 4 Exercise: Typescript in React
+# Course day 4 Exercise: Typescript in React
 ## Part 1
 1. Create a new project with `npm init vite@latest my-react-ts-app -- --template react-ts`
 2. Create a small web application using react and typescript to display a list of people. The application should have the following features:
@@ -17,6 +17,6 @@
 3. Use the steps in this [guide](https://www.sitepoint.com/how-to-migrate-a-react-app-to-typescript/) to add types to your project.
 
 #### Upload your solutions to github
-1. Create a new folder on your github repo called `week4_ts`
-2. Both part 1 and 2 of the exercise should be available as a full project in the `week4_ts` folder.
+1. Create a new folder on your github repo called `Course day4_ts`
+2. Both part 1 and 2 of the exercise should be available as a full project in the `Course day4_ts` folder.
 3. Remember to add a README.md file to the project with instructions on how to run the project.

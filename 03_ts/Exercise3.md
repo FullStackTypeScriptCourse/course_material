@@ -1,4 +1,4 @@
-# Week 3 Exercise: Typescript vs Javascript
+# Course day 3 Exercise: Typescript vs Javascript
 ## Part 1: Working in the browser
 Check out [stackblitz](https://blog.stackblitz.com/posts/vite-new-templates/)
 1. Try creating a new project with the `vanilla-ts` template (in browser: vite.new/vanilla-ts)
@@ -57,6 +57,6 @@ console.log(john.introduce()); // "Hello, my name is John Smith and I am a softw
 - Make sure it shows up right in the browser.
 
 #### Upload your solutions to github 
-1. Create a new folder on your github repo called `week3_ts`
-2. Part 1 of ther exercise should be available as a link in the README.md file in the `week3_ts` folder.
-3. Part 2 of the exercise should be available as a full project in the `week3_ts` folder.
+1. Create a new folder on your github repo called `Course day3_ts`
+2. Part 1 of ther exercise should be available as a link in the README.md file in the `Course day3_ts` folder.
+3. Part 2 of the exercise should be available as a full project in the `Course day3_ts` folder.

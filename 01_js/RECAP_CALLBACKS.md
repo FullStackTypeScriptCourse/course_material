@@ -1,4 +1,4 @@
-# Week 1: Javascript recap with callbacks
+# Course day 1: Javascript recap with callbacks
 
 ## Objectives
 

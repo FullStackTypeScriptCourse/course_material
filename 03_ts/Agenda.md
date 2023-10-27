@@ -1,4 +1,4 @@
-# Typescript week 1
+# Typescript Course day 3
 1. Quick demo project to get started ([see example](README.md) Class exercise 1).
 2. What is Typescript and how does it benefit us?
     - Being coherent in typing and consistent with static types

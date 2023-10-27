@@ -1,4 +1,4 @@
-# Agenda for week 4: React with typescript
+# Agenda for Course day 4: React with typescript
 1. Setup project
     - vite
     - tsconfig.json

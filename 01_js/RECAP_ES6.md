@@ -1,4 +1,4 @@
-# Week 1: Javascript recap ES6
+# Course day 1: Javascript recap ES6
 
 #### spread operator
 

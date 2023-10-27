@@ -60,6 +60,6 @@ app.get("/", (req, res) => {
 ```
 
 We haven't covered middleware yet in details, but you can read more about it [here](https://expressjs.com/en/guide/using-middleware.html).
-Next week we will be covering middleware in more details.
+Next Course day we will be covering middleware in more details.
 
 **Remember to upload your code to GitHub.**
