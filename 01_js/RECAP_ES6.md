@@ -95,7 +95,7 @@ func(3); // 5
 In JavaScript, the **for-in** loop is used to iterate over the **properties of an object**, while the **for-of** loop is used
 to iterate over the **values of an iterable object**, such as an array or a string.
 
-#### for...of
+#### for...of with arrays
 
 ```js
 
@@ -112,7 +112,7 @@ for (const element of arr) {
 // c
 ```
 
-#### for...in
+#### for...in with objects
 
 ```js
 
@@ -157,7 +157,7 @@ class Dog extends Animal {
 
 ## Class Exercise 3 - ES6
 
-a) Change the code to ES6 classes. You should use constructors, the super and extend keyword.
+a. Change the code to ES6 classes. You should use constructors, the super and extend keyword.
 
 ```js
 function Employee(name, salary, hireDate) {
@@ -184,7 +184,7 @@ function Contract(name, salary, hireDate, jobTitle, descriptionOfJob, employeesM
 }
 ```
 
-b) Create a toString() function for each of the Employee, Manager and Department class using the template literal.
+b. Create a toString() function for each of the Employee, Manager and Department class using the template literal.
 In the toString() remember to call the super.toString() method to get the parent class properties.
 The toString() function of the Department class should return a string with the following format:
 
@@ -194,7 +194,7 @@ The toString() function of the Department class should return a string with the 
   Department Name: Sales, Employees: Steve,Marc"
 ``` 
 
-c) Loop through the numbers array and the employee object and print out the values using the propper for loop method. (for-in, for-of)
+c. Loop through the numbers array and the employee object and print out the values using the propper for loop method. (for-in, for-of)
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -208,16 +208,12 @@ const calculator = function (num1, num2) {
 }
 ```
 
-da) Change the calculator function to an arrow function.
-
-db) Change the function to a one line function by use the implicit return.
-
-dc) Create a default value for one of the parameters.
-
-dd) Use the rest operator to change the function to accept any number of parameters.
+d. Change the calculator function to an arrow function.
+- Change the function to a one line function by use the implicit return.
+- Create a default value for one of the parameters.
+- Use the rest operator to change the function to accept any number of parameters.
 
 ```JS
 const manager = new Manager("Manager", "Manager of the Sales Department", ["Steve", "Marc"]);
 ```
-e) Use destructuring to get the jobTitle and descriptionOfJob properties from the manager object.
-
+e. Use destructuring to get the jobTitle and descriptionOfJob properties from the manager object.

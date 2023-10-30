@@ -34,7 +34,7 @@
 
 ## Hand-in and Exam.
 1. Create a GitHub repo for all your work in this course and link to it [here](https://docs.google.com/spreadsheets/d/1IKFYbYwqUlZ0sUaFcLaxl154NgoaRl0g57yY6k3ipo0/edit?usp=sharing)
-2. The repo should contain a folder for each Course day. Each folder should contain a README.md file with the answers to the exercises.
+2. The repo should contain a folder for each week. Each folder should contain a README.md file with the answers to the exercises.
 3. There should also be a folder for the semester project which you will work on gradually over the course.
 4. All your code in the repo will be used for the exam.
 
@@ -61,7 +61,98 @@
 - The exam is primaryly based on your group semester project.
 - The exam is a 30 min **individual** oral exam with no preparation time based on your code (primaryly the semester project)
 - You will be asked to explain and/or extend your code
-- You will be asked questions about the course curriculum like the ones below.
+- You will be asked questions about the course curriculum like the ones below the learning objectives.
+
+## Learning objectives
+### Flow 1
+Course day 1: Javascript recap with callbacks
+- Knowing the difference between synchronous and asynchronous code
+- Knowing how to write functions that use callbacks
+- Knowing how to write functions that take functions as arguments
+- Be able to explain the event loop
+- Be able to explain the call stack
+Course day 2: Asynchronous javascript with Promises
+- Knowing how to write functions that return promises
+- Knowing how to use the "then" and "catch" methods on promises
+- Knowing how to use the "Promise.all" method
+- Knowing how to use the "async" and "await" keywords
+- Knowing how to use the "try" and "catch" keywords
+- Be able to explain the difference between asynchronous and synchronous code
+- Be able to explain the difference between callbacks and promises
+Course day 3: Typescript 1
+- Knowing how to use the TypeScript compiler
+- Knowing how to configure the TypeScript compiler
+- Knowing the most common types in TypeScript
+- Knowing how to use the "interface" keyword in TypeScript
+- Knowing how to use the "unknown" type in TypeScript
+- Be able to explain the difference between the "any" and "unknown" types in TypeScript
+Course day 4: Typescript 2
+- Knowing how to use the "strict" mode in TypeScript
+- Knowing the most important types in used in React
+- Be able to code a simple React application using TypeScript with strict mode enabled
+### Flow 2
+Course day 5: Node.js 1
+- Knowing how to use the "Node Package Manager" (npm) in Node.js
+- Knowing how to create a new Node.js project using npm
+- Knowing how to run a Node.js script
+- Knowing how to use the "require" keyword in Node.js
+- Knowing how to use the "module.exports" keyword in Node.js
+- Be able to explain the difference between "require" and "import" in Node.js
+- Be able to start a web server in Node.js
+Course day 6: Node.js 2
+- Knowing how to use the "Express" framework in Node.js
+- Knowing how to define a route in Express
+- Knowing how to handle query parameters in Express
+- Knowing how to handle POST requests in Express
+- Knowing how to use middleware to handle errors in Express
+- Be able to explain the difference between "res.send" and "res.json" in Express
+Course day 7: MongoDB with Mongoose
+- Knowing how to use MongoDB with Mongoose in Node.js
+- Knowing how to create a new document in Mongoose
+- Knowing how to find a document in Mongoose
+- Knowing how to update a document in Mongoose
+- Knowing how to delete a document in Mongoose
+- Knowing how to define a relationship between two models in Mongoose
+- Be able to explain the difference between embedded and referenced relationships in Mongoose
+Course day 8: GraphQL
+- Knowing how to use GraphQL in Node.js
+- Knowing how to define a schema in GraphQL
+- Knowing how to define a resolver in GraphQL
+- Knowing how to define a mutation in GraphQL
+- Knowing how to define a query in GraphQL
+- Be able to design a GraphQL query in the GraphQL Playground
+- Be able to design a GraphQL mutation in the GraphQL Playground
+### Flow 3
+Course day 9: React 1 graphql client
+- Knowing how to use React in a TypeScript project
+- Knowing how to use the "useState" hook in React
+- Knowing how to use the "useEffect" hook in React
+- Knowing how to use the "useContext" hook in React
+- Knowing how to use the "useReducer" hook in React
+- Be able to code a simple React application using TypeScript
+- Be able to explain the difference between "useState" and "useReducer" in React
+- Be able to setup a GraphQL client in React
+Course day 10: React 2: state management
+- Knowing how to use the "useContext" hook in React
+- Knowing how to use the "useReducer" hook in React
+- Knowing how to use the "useMemo" hook in React
+- Knowing how to use the "useCallback" hook in React
+- Be able to explain the difference between "useState" and "useReducer" in React
+- Be able to explain the difference between "useMemo" and "useCallback" in React
+Course day 11: React 3: custom hooks
+- Knowing how to create custom hooks in React
+- Knowing how to use custom hooks in React
+- Be able to explain the difference between a custom hook and a regular function in React
+Course day 12: Frontend design
+- Knowing how to use Tailwind CSS in a React project
+- Knowing how to use styled components in a React project
+- Knowing how to use Material UI in a React project
+- Be able to explain the difference between Tailwind CSS, styled components, and Material UI
+- Be able to explain the difference between a CSS framework and a CSS library
+
+
+### Flow 2
+### Flow 3
 
 #### Typescript
 - What is the difference between typescript and javascript?
