@@ -51,7 +51,9 @@ Do something within the callback, perhaps asynchronously, then call resolve if e
 ### How to use async/await
 
 Async functions are a new feature in ES2017 that allow you to write asynchronous code in a synchronous way.
-Async functions are functions that return a Promise. They can be written in a more concise way than a promise.
+Async functions are functions that return a Promise. They can be written in a more concise way than a promises.
+
+
 
 ### How to use callbacks
 
