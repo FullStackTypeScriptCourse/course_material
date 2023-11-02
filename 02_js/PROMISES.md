@@ -15,7 +15,7 @@
 2. Go to [https://www.youtube.com/watch?v=568g8hxJJp4](https://www.youtube.com/watch?v=568g8hxJJp4) and watch the video
    about async/await
 3. Create an API KEY on [openweathermap.org](https://openweathermap.org/) **!!!--IMPORTANT--!!!**
-4. Read the [differences-between-nodejs-and-the-browser](https://nodejs.dev/en/learn/differences-between-nodejs-and-the-browser/)
+4. Read the [differences-between-nodejs-and-the-browser](https://nodejs.org/en/learn/getting-started/differences-between-nodejs-and-the-browser)
 
 ### What is promises in JavaScript?
 
