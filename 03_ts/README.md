@@ -41,19 +41,13 @@ document.getElementById("root")!.innerHTML = helloWorld("TypeScript");
 - Run `tsc` in the terminal to transpile the typescript code to javascript. This will create a index.js file.
 - Run `tsc --watch` or `tsc -w` to watch for changes in the typescript code and transpile it to javascript on the fly.
 - Open the index.html file in the browser.
-- Change the code in index.ts to insert an input field and a button to the html page. When the button is clicked, the text from the input field should be displayed inside the root element of the html page.
+- Change the code in index.ts to insert an input field and a button to the html page. When the button is clicked, the text from the input field should be displayed inside some element of the html page.
 
 ### Tsconfig.json
 
-- `target` Should be ES6 or higher. It is the version of JS we are converting our TS code to. Depending on the browsers you want to support, you may need to set some older version. It can be a good learning resource too – try playing with different versions and see what JS code is generated.
+- `target` Should be ES6 or higher. It is the version of JS we are converting our TS code to js. Depending on the browsers you want to support, you may need to set some older version. It can be a good learning resource too – try playing with different versions and see what JS code is generated.
 - `module` Should be `es2015` or higher. It defines what kind of syntax you will use for modules. commonjs which is the default uses require/module.exports and modern JS (ES6+) uses import/export. If you want to use import/export you need to change target to ES6 or higher. In the example project we will use this syntax so check the rest of the article for this.
-- `lib` You need it to specify additional libraries you will use in your project and check additional types, for example DOM related.
-- `jsx` In React you will need to set it to at least preserve. This mode assumes that another tool will compile that part (Babel in this case) but TSC will do the type checking. You can set this property to react or react-native. You use this if you want TSC to compile your JSX code into regular JS code. In most cases we will leave this property to preserve which will send the file as regular JSX and Babel/Webpack will do the rest.
-- `outDir` where the files will be placed after the compilation, for example in most React projects it will be placed in a build folder.
-- `rootDir` where the files will be taken for compilation. On most React projects this will be ./src.
 - `strict` enables a set of rules for type checking which results in a stronger check for what is considered "correct"/ I recommend starting with this on false when you are learning. Then when you feel confident enough turn it on and check what new red flags you have. But remember you will get the full potential of TS with this option enabled. This option also enables all the strict options below, which you can disable individually.
-- `include` the folder(s) you want to include to be compiled, for example the src folder
-- `exclude` the folder(s) you want to prevent from being compiled, for example the node_modules folder.
 
 ## Class Exercise 2 - individually
 1. Rewrite the code from the previous exercise to do the following:
@@ -90,7 +84,7 @@ If you want to explicitly declare the types for the arrays we saw in the example
 let jobAbilities: string[] = ['Chainspell', 'Convert'];
 let swordSkill: (string | number)[] = ["B", 5, 144, 398];
 ```
-The `|` character is for doing a union of different types.
+The `|` character is for doing a `union` of different types.
 
 ### The `any` type
 The `any` type is used when we deal with third-party programs and expect any variable but we don’t know the exact type of variable. Any data type is used because it helps in opt-in and opt-out of type checking during compilation. 
@@ -118,7 +112,7 @@ function throwError(message: string): never {
 }
 ```
 ### The ```void``` type
-`void` has special meaning in function return types, and is not an alias for undefined. The intent of `void` is that a function's return value will not be observed. So any type will do in a function since it will jus be ignored. Like this:
+`void` has special meaning in function return types, and is not an alias for undefined. The intent of `void` is that a function's return value will not be observed. So any type will do in a function since it will just be ignored. Like this:
 ```typescript
 declare function forEach<T>(arr: T[], callback: (el: T) => void): void;
 let target: number[] = [];
@@ -231,7 +225,7 @@ function myFunction(name: string, age: number): string {
 ```
 ### The ```type assertion``` type
 - To specify a more specific type for a variable, we can use the `as` keyword.
-- TypeScript only allows type assertions which convert to a more specific or less specific version of a type. This rule prevents “impossible” coercions like:
+- TypeScript only allows type assertions which convert to a more specific or less specific version of a type. This rule prevents “impossible” coercions.
 - In some cases when this is too strict we can use the double assertion like: `myVariable as any as string`, by first asserting to any and then to the desired type.
 ```typescript
 let myVariable: any = "Hello";
@@ -299,8 +293,7 @@ heal(skeleton, cure); // OK
 ```
 - The first call won't work because we need to pass at least two parameters, but the second and third are fine. message is an optional parameter. When not passed it will be received as undefined.
 
-### // 👇️ Index signature
-[Source](https://bobbyhadz.com/blog/typescript-key-string-any)
+###  👇️ Index signature
 - The **index signature** specifies that when an object is indexed with a string, it returns a value with any type.
 - Looks like this: `{[key: string]: any}`
 - Is used when we don't know all the names of a type's properties and the shape of their values ahead of time.

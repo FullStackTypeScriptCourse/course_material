@@ -55,7 +55,7 @@ Based on above data, do the following:
 
 1. **Class Creation:** Create a class named `City` that encompasses the attributes mentioned in the provided city data.
 
-2. **Object Initialization:** Initialize objects for each city using the `City` class and the data provided.
+2. **Object Initialization:** Initialize objects for each city using the `City` class and the data provided above.
 
 3. **Operations:**
 

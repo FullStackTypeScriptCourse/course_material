@@ -3,14 +3,14 @@
 Check out [stackblitz](https://blog.stackblitz.com/posts/vite-new-templates/)
 1. Try creating a new project with the `vanilla-ts` template (in browser: vite.new/vanilla-ts)
 2. Take a look at the counter.ts and see how it works
-3. Now create your own file with an input field and a button. When the button is clicked, it should alert a `Hello <inputname` to the user.
+3. Now create your own file with an input field and a button. When the button is clicked, it should alert a `Hello <inputname>` to the user.
   - Hints: 
     - use `document.createElement('input');` and `document.createElement('button');` to create the elements.
     - Send a div element `(container: HTMLDivElement)` to the function as a container for both the input and the button.
     - use `container.appendChild(element)` to add the elements to the container.
 
 ## Part 2: Making your own project
-1. Create a new typescript project with `vite init project-name -- --template vanilla-ts`
+1. Create a new typescript project with `npm create vite@latest my-new-app` and choose vanilla and typescript from the menu.
 2. Create a class called Person that has the following properties and methods:
 
 Properties:
@@ -55,6 +55,52 @@ console.log(john.introduce()); // "Hello, my name is John Smith and I am a softw
 - Create a module called `app.ts` that imports the `getPeople()` function from `people.ts` and the `renderPeopleList()` function from `peopleList.ts`. It should then call the `getPeople()` function and render the list of people in the container element.
 - Import it in the index.ts file and call the `renderPeopleList()` function.
 - Make sure it shows up right in the browser.
+
+## Part 4:
+Using this starting point: 
+```typescript
+type Role = 'Developer' | 'Manager' | 'Designer' | 'HR'; // this is a union type
+
+type Employee = {
+  // Define Employee type here
+};
+
+const employees: Employee[] = [
+  { name: 'Alice', age: 30, role: 'Developer', salary: 60000, department: 'Engineering' },
+  { name: 'Bob', age: 35, role: 'Manager', salary: 40400, department: 'Management' },
+  { name: 'Charlie', age: 28, role: 'Designer', salary: 55000, department: 'Design' },
+  // Include more employee records here with null salary values
+];
+
+function getAverageSalary(...): ... {
+  // Calculate average salary, considering null as 0
+}
+
+function findEmployeeByRole(...): ... {
+  if (typeof role !== 'string' || !['Developer', 'Manager', 'Designer', 'HR'].includes(role)) {
+    throw new Error('Invalid role');
+  }
+
+  // filter employees by role
+}
+
+// Usage
+const averageSalary = getAverageSalary(employees);
+console.log('Average Salary:', averageSalary);
+
+const developers = findEmployeeByRole(employees, 'Developer');
+console.log('Developers:', developers);
+```
+Do the following:
+1. Define the `Employee` type that includes the following properties:
+   - `name` (string)
+   - `age` (number)
+   - `role` (union type of specific roles)
+   - `salary` (number)
+   - `department` (string)
+2. Create an array of `Employee` objects with a minimum of 6 employees. Include some `null` values in a few employee records for salary.
+3. Implement a function `getAverageSalary` that takes an array of `Employee` objects and returns the average salary of all employees. If the salary for an employee is `null`, consider it as zero while calculating the average.
+4. Implement a function `findEmployeeByRole` that takes an array of `Employee` objects and a `role` (using `unknown` type) as input and returns an array of employees with the provided role.
 
 #### Upload your solutions to github 
 1. Create a new folder on your github repo called `Course day3_ts`
