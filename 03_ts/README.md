@@ -50,7 +50,7 @@ document.getElementById("root")!.innerHTML = helloWorld("TypeScript");
 - `strict` enables a set of rules for type checking which results in a stronger check for what is considered "correct"/ I recommend starting with this on false when you are learning. Then when you feel confident enough turn it on and check what new red flags you have. But remember you will get the full potential of TS with this option enabled. This option also enables all the strict options below, which you can disable individually.
 
 ## Class Exercise 2 - individually
-1. Rewrite the code from the previous exercise to do the following:
+1. Starting a new project: `npm create vite@latest my-new-app` will create a new project containing with these important files:
 - Create a class called `Person` with the following properties:
   - `name` (string)
   - `age` (number)
