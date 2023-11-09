@@ -1,5 +1,5 @@
 # Course day 4: Typescript 2 setup react project
-[Link til klasse demo](https://github.com/HartmannDemoCode/demo_Course day4)
+
 ## Objectives
 - Understand how to setup a react project with typescript using vite
 - Understand how to run a react project with typescript
@@ -72,8 +72,7 @@ export default function Layout({ children }: LayoutProps) {
   // ...
 }
 ```
-The above code shows how send a component as a prop to another component in react.
-- 
+The above code shows how to send a component as a prop to another component in react.
 
 #### Creating type with template literals
 - You can create a type with template literals like this:
