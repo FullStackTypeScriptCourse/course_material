@@ -101,6 +101,10 @@ Do the following:
 2. Create an array of `Employee` objects with a minimum of 6 employees. Include some `null` values in a few employee records for salary.
 3. Implement a function `getAverageSalary` that takes an array of `Employee` objects and returns the average salary of all employees. If the salary for an employee is `null`, consider it as zero while calculating the average.
 4. Implement a function `findEmployeeByRole` that takes an array of `Employee` objects and a `role` (using `unknown` type) as input and returns an array of employees with the provided role.
+5. Integrate the above functions in the `main.ts` file and print the results in the browser console.
+6. Make a display of the employees in the browser (as a table)
+7. Display the average salary in the browser
+8. Make an input field to filter employees in the table by role (use the `findEmployeeByRole` function)
 
 #### Upload your solutions to github 
 1. Create a new folder on your github repo called `Course day3_ts`
