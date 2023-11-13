@@ -1,21 +1,9 @@
-# Express Middleware, Error Handling and MongoDB/mongoose
+# MongoDB && Mongoose
 
 
-**!!! warning
-Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section
-below.**
+**Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section below.**
 
 ## Links
-
-**Express Middleware**
-
-- [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
-- [Express Middleware Documentation](https://expressjs.com/en/resources/middleware.html)
-
-**Error Handling**
-
-- [Error Handling in Express](https://expressjs.com/en/guide/error-handling.html)
-- [Express Error Handling Middleware Example](https://expressjs.com/en/resources/middleware/errorhandler.html)
 
 **MongoDB**
 
@@ -26,102 +14,6 @@ below.**
 
 - [Mongoose Documentation](https://mongoosejs.com/)
 
-**Error Handling Videos**
-
-1. [Postman Environment Variables](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2a62ff5c-7ad5-4d73-9022-afcb007c5752)
-2. [Error-Undefined Routes](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6ee6e853-01bc-4f5a-af62-afcb008d1628)
-3. [Error-Global Error Handler](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=186c18ce-9a61-402d-9ac7-afcb00d13dfa)
-4. [Error: Refactoring](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b1f9d423-8292-42b2-bdf6-afcb00e1910c)
-5. [Catch Async](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b3ff51de-22b3-4e0f-8806-afcb012cae02)
-6. [IsOperational](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a4f430e3-c362-4783-a710-afcc00bf864b)
-
-***
-
-## Refactoring
-
-Last time around we had all logic in one file. Today we will be refactoring to make our code more modular.
-When we are done we will have the following files and structure:
-
-```mermaid
-graph LR
-    A[server.js] --> B[app.js]
-    B --> C[router.js]
-    C --> D[controller.js]
-```
-
-### server.js
-
-The server.js file will be responsible for starting the server and connect to our database.
-
-### app.js
-
-The app.js file will be responsible for setting up our express application. This includes setting up our middleware and
-routes.
-
-### router.js
-
-The router.js file will be responsible for setting up our routes. This includes setting up our routes and the controller
-functions that will be called when a route is hit.
-
-### controller.js
-
-The controller.js file will be responsible for handling the logic for each route. This includes reading and writing to
-the database.
-
-## ExpressMiddleware (from the express docs)
-
-Express is in its self a routing and middleware web framework that has minimal functionality of its own:
-An Express application is essentially a series of middleware function calls.
-
-Middleware functions are functions that have access to the request object (req), the response object (res),
-and the next middleware function in the application’s request-response cycle. The next middleware function is commonly
-denoted by a variable named `next()`.
-
-Middleware functions can perform the following tasks:
-
-- Execute any code.
-- Make changes to the request and the response objects.
-- End the request-response cycle.
-- Call the next middleware function in the stack.
-
-If the current middleware function does not end the request-response cycle, it must call next() to pass control to the
-next middleware function. Otherwise, the request will be left hanging.
-
-An Express application can use the following types of middleware:
-
-- Application-level middleware // app.use()
-- Router-level middleware // router.use()
-- Error-handling middleware // app.use()
-- Built-in middleware // express.json()
-- Third-party middleware // morgan
-
-***
-
-## Express Error Handling
-
-Error handling in Express is done through the use of middleware. The error-handling middleware is defined with four
-arguments instead of the usual three: (err, req, res, next). For example:
-
-```js
-app.use(function (err, req, res, next) {
-    console.error(err.stack)
-    res.status(500).send('Something broke!')
-})
-```
-
-The error-handling middleware always takes four arguments. You must provide four arguments to identify it as an
-error-handling middleware function. Even if you don’t need to use the next object, you must specify it to maintain the
-signature. Otherwise, the next object will be interpreted as regular middleware and will fail to handle errors.
-
-If you define multiple error-handling middleware functions, they are executed sequentially, just like regular middleware
-functions. The first error-handling middleware function that calls next() will transfer control to the next
-error-handling
-middleware function. If no error-handling middleware function calls next(), the default Express error handler will be
-invoked, which simply returns an Internal Server Error (500) status code to the client.
-
-Read the docs for more info: https://expressjs.com/en/guide/error-handling.html
-
-***
 
 ## MongoDB
 
@@ -268,67 +160,7 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 
 ***
 
-## Class Exercises 1 Refactoring
-
-- Clone the [repo](https://github.com/FullStackTypeScriptCourse/fullstack_backend_startcode) and install the
-  dependencies
-- Refactor the code as explained in class. Look at the model above for guidance.
-- Add some dummy data to an array in your controller.
-
-```JSON
-[
-  {
-    "id": "1",
-    "model": "Audi",
-    "year": 2010,
-    "price": 10000,
-    "color": "red"
-  },
-  {
-    "id": "2",
-    "model": "Volvo",
-    "year": 2012,
-    "price": 12000,
-    "color": "blue"
-  },
-  {
-    "id": "3",
-    "model": "Saab",
-    "year": 2001,
-    "price": 5000,
-    "color": "green"
-  },
-  {
-    "id": "4",
-    "model": "BMW",
-    "year": 2015,
-    "price": 15000,
-    "color": "black"
-  },
-  {
-    "id": "5",
-    "model": "Mercedes",
-    "year": 2017,
-    "price": 20000,
-    "color": "red"
-  }
-]
-```
-
-- Add the following routes to your controller:
-  - GET /api/v1/cars - returns all cars
-  - GET /api/v1/cars/:id - returns a single cars
-  - POST /api/v1/cars - creates a new cars
-  - PATCH /api/v1/cars/:id - updates a cars(partially)
-  - DELETE /api/v1/cars/:id - deletes a cars
-- Remember the following:
-  - try/catch blocks
-  - logging af errors
-- Use Postman to test your routes
-
-***
-
-## Class Exercises 2 MongoDB
+## Class Exercises 1 MongoDB
 
 1. Create a MongoDB database on [MongoDB Atlas](https://www.mongodb.com/atlas)
 2. Create a new project and add a new cluster
@@ -340,34 +172,30 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
    and click `Create User`. Remember to save the username and password.
 7. Choose `My Local Environment` as the connection method and click `Connect`.
 8. In your `config.env` file create the following environment variables:
-  - DATABASE_DEV=
-  - DATABASE_PROD=
-  - DATABASE_USERNAME=
-  - DATABASE_PASSWORD=
+    - `DATABASE_DEV`
+    - `DATABASE_PROD`
+    - `DATABASE_PASSWORD`
 9. Copy the connection string from MongoDB Atlas and paste it into the `DATABASE_DEV` environment variable. Replace the
    `<password>` with the password you created in step 6.
 10. Copy the connection string from MongoDB Atlas and paste it into the `DATABASE_PROD` environment variable. Replace the
     `<password>` with the password you created in step 6. (That step is not necessary if you are not deploying your app)
 11. Now we are ready to connect to our database. In your `server.ts` file import the `mongoose` package and connect to the
     database. Remember to use the `DATABASE_DEV` environment variable. To connect to the database use the following code:
-
-```typescript
-const DB = process.env.DATABASE_DEV!.replace(
-    '<PASSWORD>',
-    process.env.DATABASE_PASSWORD!,
-);
-
-mongoose.connect(DB, {
-}).then(() => console.log('DB connection successful!'));
-```
-
+    ```TypeScript
+    const DB = process.env.DATABASE_DEV!.replace(
+        '<PASSWORD>',
+        process.env.DATABASE_PASSWORD!,
+    );
+    
+    mongoose.connect(DB, {
+    }).then(() => console.log('DB connection successful!'));
+    ```
 12. We need to create a new model for our cars. Create a new file called `carModel.ts` in the `models` folder. In this file
     we will create a new Mongoose schema for our cars. The schema should have the following fields:
-  - model: string (required, trim, maxlength: 20, minlength: 5),
-  - year: number
-  - price: number
-  - color: string (enum: red, blue, green, black, white)
-  - createdAt: date
+    - `name` - String, required
+    - `price` - Number, required
+    - `color` - String, required
+    - `createdAt` - Date, default Date.now
 13. Now we need to replace the dummy data in our controller with data from our database. In your `carController.ts` file
     import the `Car` model and use the `find()` method to get all cars from the database. (Remember to use `await` when you call the `find()` method)
 14. Replace the methods from exercise 1 with database methods. Remember to use `await` when you call the database methods.

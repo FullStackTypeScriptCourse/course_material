@@ -1,4 +1,4 @@
-## Node & Express
+# Express && Node.js
 
 ### Agenda
 
@@ -7,6 +7,11 @@
 - Exercises
 - Homework
 - Resources
+
+### Express Middleware
+
+- [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
+- [Express Middleware](https://expressjs.com/en/guide/using-middleware.html)
 
 ### Node
 

@@ -1,10 +1,20 @@
-## Node.js
+# Express && Node.js
 
-### Links
+## Links
 
-**Make sure you look at the links below before class!! :smile:**
+**Express**
+- [Express](https://expressjs.com/)
 
-#### Node
+**Express Middleware**
+- [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
+- [Express Middleware Documentation](https://expressjs.com/en/resources/middleware.html)
+
+**Error Handling**
+- [Error Handling in Express](https://expressjs.com/en/guide/error-handling.html)
+- [Express Error Handling Middleware Example](https://expressjs.com/en/resources/middleware/errorhandler.html)
+
+
+**Node**
 - [Node.js Guide](https://nodejs.org/en/docs/guides/)
 - [NOde NPM Guide](https://nodejs.dev/en/learn/an-introduction-to-the-npm-package-manager/)
 - [Node.js with Typescript](https://nodejs.dev/en/learn/nodejs-with-typescript/)
@@ -12,11 +22,127 @@
 - [Using environment variables](https://nodejs.dev/en/learn/how-to-read-environment-variables-from-nodejs)
   - [dotenv](https://www.npmjs.com/package/dotenv)
 
+***
 
-#### Express
-- [Express](https://expressjs.com/)
+## Express
 
-### Node
+Express is a popular web framework for Node.js that simplifies the process of building web applications.
+It provides a range of tools and features that make it easy to create server-side applications using Node.js.
+
+1. Express is a web framework for Node.js that simplifies the process of building web applications.
+2. Express provides a range of tools and features that make it easy to create server-side applications using Node.js.
+3. Express uses middleware, which allows developers to add functionality to their applications without having to write a lot of code.
+4. Express supports a range of template engines, which makes it easy to generate dynamic HTML pages.
+5. Express includes built-in support for routing, which allows developers to define how different URLs should be handled by their applications.
+6. Express supports a wide range of HTTP methods, including GET, POST, PUT, DELETE, and more.
+
+Read the `getting started` guide for Express here:
+- [Express](https://expressjs.com/en/starter/installing.html)
+
+**Example of a simple express server.**
+
+```JS
+import express = require('express');
+const app = express();
+
+
+app.get('/', (req, res) => {
+   res.send('Hello, world!');
+});
+
+app.listen(3000, () => {
+   console.log(`Server is listening to http://localhost:3000`);
+});
+
+```
+
+In this example, we're creating an Express app and defining a single route at the root URL `(/)`.
+
+When a GET request is made to this URL, Express calls the callback function that we've defined,
+which sends the string "Hello, world!" back to the client using `res.send()`.
+
+Finally, we start the Express app by calling the `listen()` method and specifying the port number to listen on.
+
+This is just a simple example, but it should give you a sense of how easy it is to get started with Express in Node.js.
+Express provides a powerful set of features for building web applications, including middleware, routing, and templating.
+
+***
+
+### server.js
+
+The server.js file will be responsible for starting the server and connect to our database.
+
+### app.js
+
+The app.js file will be responsible for setting up our express application. This includes setting up our middleware and
+routes.
+
+### router.js
+
+The router.js file will be responsible for setting up our routes. This includes setting up our routes and the controller
+functions that will be called when a route is hit.
+
+### controller.js
+
+The controller.js file will be responsible for handling the logic for each route. This includes reading and writing to
+the database.
+
+### ExpressMiddleware (from the express docs)
+
+Express is in its self a routing and middleware web framework that has minimal functionality of its own:
+An Express application is essentially a series of middleware function calls.
+
+Middleware functions are functions that have access to the request object (req), the response object (res),
+and the next middleware function in the application’s request-response cycle. The next middleware function is commonly
+denoted by a variable named `next()`.
+
+Middleware functions can perform the following tasks:
+
+- Execute any code.
+- Make changes to the request and the response objects.
+- End the request-response cycle.
+- Call the next middleware function in the stack.
+
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the
+next middleware function. Otherwise, the request will be left hanging.
+
+An Express application can use the following types of middleware:
+
+- Application-level middleware // app.use()
+- Router-level middleware // router.use()
+- Error-handling middleware // app.use()
+- Built-in middleware // express.json()
+- Third-party middleware // morgan
+
+***
+
+### Express Error Handling
+
+Error handling in Express is done through the use of middleware. The error-handling middleware is defined with four
+arguments instead of the usual three: (err, req, res, next). For example:
+
+```js
+app.use(function (err, req, res, next) {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')
+})
+```
+
+The error-handling middleware always takes four arguments. You must provide four arguments to identify it as an
+error-handling middleware function. Even if you don’t need to use the next object, you must specify it to maintain the
+signature. Otherwise, the next object will be interpreted as regular middleware and will fail to handle errors.
+
+If you define multiple error-handling middleware functions, they are executed sequentially, just like regular middleware
+functions. The first error-handling middleware function that calls next() will transfer control to the next
+error-handling
+middleware function. If no error-handling middleware function calls next(), the default Express error handler will be
+invoked, which simply returns an Internal Server Error (500) status code to the client.
+
+Read the docs for more info: https://expressjs.com/en/guide/error-handling.html
+
+***
+
+## Node
 
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment. It allows developers to use
 JavaScript to write server-side code, which means that they can create web applications with JavaScript on both the
@@ -88,50 +214,6 @@ Inside the callback function, we set the response headers using `res.writeHead()
 `res.write()`. Finally, we end the response with `res.end()`.
 
 ***
-
-### Express
-
-Express is a popular web framework for Node.js that simplifies the process of building web applications.
-It provides a range of tools and features that make it easy to create server-side applications using Node.js.
-
-1. Express is a web framework for Node.js that simplifies the process of building web applications.
-2. Express provides a range of tools and features that make it easy to create server-side applications using Node.js.
-3. Express uses middleware, which allows developers to add functionality to their applications without having to write a lot of code.
-4. Express supports a range of template engines, which makes it easy to generate dynamic HTML pages.
-5. Express includes built-in support for routing, which allows developers to define how different URLs should be handled by their applications.
-6. Express supports a wide range of HTTP methods, including GET, POST, PUT, DELETE, and more.
-
-Read the `getting started` guide for Express here:
-- [Express](https://expressjs.com/en/starter/installing.html)
-
-**Example of a simple express server.**
-
-```JS
-import express = require('express');
-const app = express();
-
-
-app.get('/', (req, res) => {
-   res.send('Hello, world!');
-});
-
-app.listen(3000, () => {
-   console.log(`Server is listening to http://localhost:3000`);
-});
-
-```
-
-In this example, we're creating an Express app and defining a single route at the root URL `(/)`.
-
-When a GET request is made to this URL, Express calls the callback function that we've defined, 
-which sends the string "Hello, world!" back to the client using `res.send()`.
-
-Finally, we start the Express app by calling the `listen()` method and specifying the port number to listen on.
-
-This is just a simple example, but it should give you a sense of how easy it is to get started with Express in Node.js. 
-Express provides a powerful set of features for building web applications, including middleware, routing, and templating.
-
-*** 
 
 ### Read and Write files
 
