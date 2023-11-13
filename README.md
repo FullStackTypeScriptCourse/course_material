@@ -7,18 +7,18 @@
 | Course day | Date          | Subject                                                                            | Content                                                                 | Teacher |
 |------------|---------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|---------|
 | 01         | 31/10/2023    | [JS Part 1 ](01_js/RECAP_CALLBACKS.md) && [JS part 2 ](01_js/RECAP_ES6.md)         | ES6 recap, Callback, Writing functions that use callbacks               | THA     |
-| 02         | 2/11/2023     | [JS Part 3](02_js/PROMISES.md)                                                     | Asynchronous javascript with Promises (lave egne promises), Async await | JORG    |
-| 03         | 7/11/2023     | [Typescript 1](03_ts/README.md)                                                    | transpiler, autotranspile, tsconfig, type, interface, class             | THA     |
+| 02         | 2/11/2023     | [JS Part 3](02_js/PROMISES.md)                                                     | Asynchronous JavaScript with Promises, Async-Await                      | JORG    |
+| 03         | 7/11/2023     | [Typescript 1](03_ts/README.md)                                                    | Transpiler, auto-transpile, tsconfig, type, interface, class            | THA     |
 | 04<br/>05  | 9/11/2023     | [Typescript 2](04_ts/README.md)                                                    | Using typescript in a react project                                     | JORG    |
-| 06         | 14/11/2023    | [Node.js && Express 1](05_express/README.md) && [Exercise](05_express/EXERCISE.md) | Node.js: Read & Write to files, enviroment variables, server, REST API  | THA     |
+| 06         | 14/11/2023    | [Node.js && Express 1](05_express/README.md) && [Exercise](05_express/EXERCISE.md) | Read & write to files, environment variables etc. Rest-api with express | THA     |
 | 07         | 16/11/2023    | [MongoDB && Mongoose ](06_mongodb/README.md)                                       |                                                                         | JORG    |
 | 08         | 21/11/2023    | [MongoDB Data Modelling](07_data_modelling/README.md)                              |                                                                         | THA     |
 | 09         | 23/11/2023    | [GraphQL](08_graphql_backend/README.md)                                            | State management                                                        | JORG    |
-| 10         | 28/11/2023    | [React 1](09_graphql_client/README.md)                                             | Hooks (lav egne hooks). Recap                                           | THA     |
+| 10         | 28/11/2023    | [React 1](09_graphql_client/README.md)                                             | Hooks (create our own hooks). Recap                                     | THA     |
 | 11         | 30/11/2023    | [React 2](10_state_management/README.md)                                           |                                                                         | JORG    |
 | 12         | 5/12/2023     | [React 3](11_custom_hooks/README.md) (Frontend GraphQL)                            |                                                                         | THA     |
 |            | 14-15/12/2023 | [Frontend design](12_tailwind/README.md) (GUI layout)                              | Security Exam !!                                                        |         |
-|            | 20/12/2023    |                                                                                    | Exam project handin on wiseflow                                         |         |
+|            | 20/12/2023    |                                                                                    | Exam project hand-in on Wiseflow                                        |         |
 |            | 5/1/2024      |                                                                                    | Exam                                                                    |         |
 |            |               |                                                                                    |                                                                         |         |
 
