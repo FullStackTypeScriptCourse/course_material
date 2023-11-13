@@ -61,7 +61,7 @@ Negative:
 - We need to make sure that the data is not updated.
 - We need 2 queries to get the data from the referenced document.
 
-![img.png](img.png)
+![img.png](images/img.png)
 
 ## Embedded / Denormalized
 
@@ -76,7 +76,7 @@ Negative:
 - More data to store
 - Impossible to query the embedded data without the main document
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 ## When to use Embedded vs Referenced
 
@@ -99,7 +99,7 @@ independently of the main document.
 It's important to note that there is no one-size-fits-all solution and the decision to use embedded or referenced
 relationships should be made based on the specific requirements of the application and the data being modeled.
 
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
 ## Types of referencing
 
@@ -132,15 +132,15 @@ volume when deciding on the type of relationship to use.
 
 ## Child referencing
 
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 
 ## Parent referencing
 
-![img_4.png](img_4.png)
+![img_4.png](images/img_4.png)
 
 ## Two-way referencing
 
-![img_5.png](img_5.png)
+![img_5.png](images/img_5.png)
 
 ## Mongoose Middleware
 
