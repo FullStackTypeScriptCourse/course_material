@@ -4,42 +4,21 @@
 
 ***
 
-<<<<<<< HEAD
-| Course day | Date | Subject | Content | Teacher |
-|--|--|--|--|--|
-| 1 | 31/10/2023 | [JS Part 1 ](01_js/RECAP_CALLBACKS.md) && [JS part 2 ](01_js/RECAP_ES6.md) | ES6 recap, Callback, Writing functions that use callbacks                | THA |
-| 2 | 2/11/2023  | [JS Part 3](02_js/PROMISES.md)                                              | Asynchronous javascript with Promises (lave egne promises), Async await | JORG|
-| 3 | 7/11/2023  | [Typescript 1](03_ts/README.md)                                             | transpiler, autotranspile, tsconfig, type, interface, class             | THA |
-| 4 | 9/11/2023  | [Typescript 2](04_ts/README.md)                                             | Using typescript in a react project                                     | JORG|
-| 5 | 14/11/2023 | [NodeJS/Express 1](05_node/README.md) && [Exercise](05_node/EXERCISE.md)    | Node.js: Read & Write to files, enviroment variables, server, REST API  | THA |
-| 6 | 16/11/2023 | [MongoDB Data Modelling](06_data_modelling/README.md)|                          | JORG |
-| 7 | 21/11/2023 | [GraphQL](07_graphql_backend/README.md)|                                        | THA |
-| 8 | 23/11/2023 | [Graphql client](08_graphql_client/README.md)| State management                        | JORG |
-| 9 | 28/11/2023 | [React state management](09_state_management/README.md)| Hooks (lav egne hooks). Recap         | THA |
-| 10| 30/11/2023 | [React custom hooks](10_custom_hooks/README.md) (Frontend GraphQL)|                        | JORG |
-|  | 14-15/12/2023| Security Exam !! |||
-|  | 20/12/2023| Exam project handin on wiseflow |||
-|  | 5/1/2024| Exam |||
-||||||
-=======
-| Course day | Date          | Subject                                                                            | Content                                                                 | Teacher |
-|------------|---------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|---------|
-| 01         | 31/10/2023    | [JS Part 1 ](01_js/RECAP_CALLBACKS.md) && [JS part 2 ](01_js/RECAP_ES6.md)         | ES6 recap, Callback, Writing functions that use callbacks               | THA     |
-| 02         | 2/11/2023     | [JS Part 3](02_js/PROMISES.md)                                                     | Asynchronous JavaScript with Promises, Async-Await                      | JORG    |
-| 03         | 7/11/2023     | [Typescript 1](03_ts/README.md)                                                    | Transpiler, auto-transpile, tsconfig, type, interface, class            | THA     |
-| 04<br/>05  | 9/11/2023     | [Typescript 2](04_ts/README.md)                                                    | Using typescript in a react project                                     | JORG    |
-| 06         | 14/11/2023    | [Node.js && Express 1](05_express/README.md) && [Exercise](05_express/EXERCISE.md) | Read & write to files, environment variables etc. Rest-api with express | THA     |
-| 07         | 16/11/2023    | [MongoDB && Mongoose ](06_mongodb/README.md)                                       |                                                                         | JORG    |
-| 08         | 21/11/2023    | [MongoDB Data Modelling](07_data_modelling/README.md)                              |                                                                         | THA     |
-| 09         | 23/11/2023    | [GraphQL](08_graphql_backend/README.md)                                            | State management                                                        | JORG    |
-| 10         | 28/11/2023    | [React 1](09_graphql_client/README.md)                                             | Hooks (create our own hooks). Recap                                     | THA     |
-| 11         | 30/11/2023    | [React 2](10_state_management/README.md)                                           |                                                                         | JORG    |
-| 12         | 5/12/2023     | [React 3](11_custom_hooks/README.md) (Frontend GraphQL)                            |                                                                         | THA     |
-|            | 14-15/12/2023 | [Frontend design](12_tailwind/README.md) (GUI layout)                              | Security Exam !!                                                        |         |
-|            | 20/12/2023    |                                                                                    | Exam project hand-in on Wiseflow                                        |         |
-|            | 5/1/2024      |                                                                                    | Exam                                                                    |         |
-|            |               |                                                                                    |                                                                         |         |
->>>>>>> da322157e3f2caebf6a6e2b4fd2a1e4cdd33cdf2
+| Course day | Date          | Subject                                                                    | Content                                                                 | Teacher |
+|------------|---------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------|---------|
+| 01         | 31/10/2023    | [JS Part 1 ](01_js/RECAP_CALLBACKS.md) && [JS part 2 ](01_js/RECAP_ES6.md) | ES6 recap, Callback, Writing functions that use callbacks               | THA     |
+| 02         | 2/11/2023     | [JS Part 3](02_js/PROMISES.md)                                             | Asynchronous JavaScript with Promises, Async-Await                      | JORG    |
+| 03         | 7/11/2023     | [Typescript 1](03_ts/README.md)                                            | Transpiler, auto-transpile, tsconfig, type, interface, class            | THA     |
+| 04         | 9/11/2023     | [Typescript 2](04_ts/README.md)                                            | Using typescript in a react project                                     | JORG    |
+| 05         | 14/11/2023    | [NodeJS/Express 1](05_node/README.md) && [Exercise](05_node/EXERCISE.md)   | Read & write to files, environment variables etc. Rest-api with express | THA     |
+| 06         | 16/11/2023    | [MongoDB && Mongoose ](06_mongodb/README.md)                               |                                                                         | JORG    |
+| 07         | 21/11/2023    | [GraphQL](08_graphql_backend/README.md)                                    |                                                                         | THA     |
+| 08         | 23/11/2023    | [Graphql client](08_graphql_client/README.md)                              | State management                                                        | JORG    |
+| 09         | 28/11/2023    | [React state management](09_state_management/README.md)                    | Hooks (create our own hooks). Recap                                     | THA     |
+| 10         | 30/11/2023    | [React custom hooks](10_custom_hooks/README.md)                            |                                                                         | JORG    |
+| 11         | 14-15/12/2023 | Security Exam !!                                                           |                                                                         | THA     |
+| 12         | 20/12/2023    | Exam project hand-in on wiseflow                                           |                                                                         |         |
+| 13         | 5/1/2024      | Exam                                                                       |                                                                         |         |
 
 ***
 
