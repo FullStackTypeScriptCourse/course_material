@@ -11,7 +11,7 @@
 | 03         | 7/11/2023     | [Typescript 1](03_ts/README.md)                                            | Transpiler, auto-transpile, tsconfig, type, interface, class            | THA     |
 | 04         | 9/11/2023     | [Typescript 2](04_ts/README.md)                                            | Using typescript in a react project                                     | JORG    |
 | 05         | 14/11/2023    | [NodeJS/Express 1](05_node/README.md) && [Exercise](05_node/EXERCISE.md)   | Read & write to files, environment variables etc. Rest-api with express | THA     |
-| 06         | 16/11/2023    | [MongoDB && Mongoose ](06_mongodb/README.md)                               |                                                                         | JORG    |
+| 06         | 16/11/2023    | [MongoDB](06_mongodb/MONGODB.md) && [Mongoose](06_mongodb/MONGOOSE.md)     |                                                                         | JORG    |
 | 07         | 21/11/2023    | [GraphQL](08_graphql_backend/README.md)                                    |                                                                         | THA     |
 | 08         | 23/11/2023    | [Graphql client](08_graphql_client/README.md)                              | State management                                                        | JORG    |
 | 09         | 28/11/2023    | [React state management](09_state_management/README.md)                    | Hooks (create our own hooks). Recap                                     | THA     |

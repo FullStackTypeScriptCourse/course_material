@@ -1,4 +1,4 @@
-# MongoDB && Mongoose
+# MongoDB
 
 **Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section
 below.**
@@ -89,7 +89,7 @@ to a row in a relational database. Below is an example of a Document in MongoDB:
         "$oid": "641c4a617e280fbda629dfc6"
       },
       "name": "Steve",
-      "email": "steve@mail.com",
+      "email": "steve@mail.com"
 
 ```
 
@@ -208,11 +208,7 @@ higher-level, schema-based API for working with MongoDB, making it easier to def
 
 ***
 
-<<<<<<<< HEAD:old/06_express/README.md
-## Class Exercises 2 MongoDB
-========
 ## Class Exercises 1 MongoDB
->>>>>>>> da322157e3f2caebf6a6e2b4fd2a1e4cdd33cdf2:06_mongodb/README.md
 
 1. Create a MongoDB database on [MongoDB Atlas](https://www.mongodb.com/atlas)
 2. Create a new project and add a new cluster
