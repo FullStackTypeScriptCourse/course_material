@@ -29,7 +29,6 @@ Remember to use the `dotenv` package to store your environment variables and the
 
 ### Middleware
 
-- [What the heck is middleware?](https://www.youtube.com/watch?v=MIr1oxQ3pao)
 
 You will be using the following middleware:
 
@@ -60,6 +59,5 @@ app.get("/", (req, res) => {
 ```
 
 We haven't covered middleware yet in details, but you can read more about it [here](https://expressjs.com/en/guide/using-middleware.html).
-Next Course day we will be covering middleware in more details.
 
 **Remember to upload your code to GitHub.**

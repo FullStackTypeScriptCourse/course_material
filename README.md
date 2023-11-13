@@ -11,13 +11,11 @@
 | 3 | 7/11/2023  | [Typescript 1](03_ts/README.md)                                             | transpiler, autotranspile, tsconfig, type, interface, class             | THA |
 | 4 | 9/11/2023  | [Typescript 2](04_ts/README.md)                                             | Using typescript in a react project                                     | JORG|
 | 5 | 14/11/2023 | [NodeJS/Express 1](05_node/README.md) && [Exercise](05_node/EXERCISE.md)    | Node.js: Read & Write to files, enviroment variables, server, REST API  | THA |
-| 6 | 16/11/2023 | [Middleware & Error handling & Refactoring & MongoDB ](06_express/README.md)|                                                                         | JORG|
-| 7 | 21/11/2023 | [MongoDB Data Modelling](07_data_modelling/README.md)|                                                                                                | THA |
-| 8 | 23/11/2023 | [GraphQL](08_graphql_backend/README.md)|                                                                                                              | JORG|
-| 9 | 28/11/2023 | [React 1](09_graphql_client/README.md)| State management                                                                                              | THA |
-| 10 | 30/11/2023 | [React 2](10_state_management/README.md)| Hooks (lav egne hooks). Recap                                                                              | JORG|
-| 11 | 5/12/2023 | [React 3](11_custom_hooks/README.md) (Frontend GraphQL)|                                                                                              | THA |
-| 12 | 7/12/2023 | [Frontend design](12_tailwind/README.md) (GUI layout)  |                                                                                              | JORG|
+| 6 | 16/11/2023 | [MongoDB Data Modelling](06_data_modelling/README.md)|                          | JORG |
+| 7 | 21/11/2023 | [GraphQL](07_graphql_backend/README.md)|                                        | THA |
+| 8 | 23/11/2023 | [Graphql client](08_graphql_client/README.md)| State management                        | JORG |
+| 9 | 28/11/2023 | [React state management](09_state_management/README.md)| Hooks (lav egne hooks). Recap         | THA |
+| 10| 30/11/2023 | [React custom hooks](10_custom_hooks/README.md) (Frontend GraphQL)|                        | JORG |
 |  | 14-15/12/2023| Security Exam !! |||
 |  | 20/12/2023| Exam project handin on wiseflow |||
 |  | 5/1/2024| Exam |||

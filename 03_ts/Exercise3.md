@@ -76,7 +76,7 @@ function getAverageSalary(...): ... {
   // Calculate average salary, considering null as 0
 }
 
-function findEmployeeByRole(...): ... {
+function findEmployeesByRole(...): ... {
   if (typeof role !== 'string' || !['Developer', 'Manager', 'Designer', 'HR'].includes(role)) {
     throw new Error('Invalid role');
   }
@@ -88,7 +88,7 @@ function findEmployeeByRole(...): ... {
 const averageSalary = getAverageSalary(employees);
 console.log('Average Salary:', averageSalary);
 
-const developers = findEmployeeByRole(employees, 'Developer');
+const developers = findEmployeesByRole(employees, 'Developer');
 console.log('Developers:', developers);
 ```
 Do the following:
