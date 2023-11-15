@@ -163,7 +163,7 @@ const resolvers = {
 - Create a resolver for each of the fields in the Query type.
 - Create a resolver for each of the fields in the Mutation type.
 - Create a resolver for each of the fields in the Subscription type.
-=======
+
 # Course day 4: Typescript 2
 
 ## Objectives
