@@ -168,7 +168,6 @@ const resolvers = {
 
 ## Objectives
 
-- 
 
 ## How to prepare before class
 
@@ -176,7 +175,7 @@ const resolvers = {
 ## Class Exercise 1
 
 ## Class Exercise 2
->>>>>>> 2d3ffb5 (additional commit)
+
 
 ## Topic 1:
 
