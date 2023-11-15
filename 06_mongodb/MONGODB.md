@@ -3,7 +3,6 @@
 **Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section
 below.**
 
-
 ## Links
 
 **MongoDB**
@@ -14,7 +13,6 @@ below.**
 **Mongoose**
 
 - [Mongoose Documentation](https://mongoosejs.com/)
-
 
 ## MongoDB
 
@@ -118,7 +116,7 @@ where each document can have its own unique structure and fields.
   before data is inserted. Document databases are schema-less, meaning that data can be inserted without a pre-defined
   schema, making them more flexible and easier to change.
 - **Data normalization: ** In a relational database, data is often normalized to eliminate redundancy and improve
-  performance. In a document database, denormalization is common, where data is duplicated or embedded within a document
+  performance. In a document database, de-normalization is common, where data is duplicated or embedded within a document
   to improve query performance.
 
 Overall, the choice between a relational database and a document database depends on the specific requirements of your
@@ -126,3 +124,16 @@ application. If your data has a fixed schema and requires complex queries, a rel
 If your data is flexible and requires high scalability, a document database may be more suitable.
 
 ***
+
+### Querying MongoDB
+
+| Command | Description              |
+|---------|--------------------------|
+| $ne     | Not equal to             |
+| $lt     | Less than                |
+| $lte    | Less than or equal to    |
+| $gt     | Greater than             |
+| $gte    | Greater than or equal to |
+
+Above are just some examples of the operators that can be used in MongoDB. For a full list of operators, see the
+MongoDB documentation.
