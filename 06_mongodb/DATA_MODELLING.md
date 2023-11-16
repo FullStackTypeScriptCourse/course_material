@@ -37,7 +37,7 @@ In MongoDB, there are two ways to represent relationships between different docu
    normalization, and it allows for better data consistency and reduces data redundancy. However, it requires multiple
    queries to fetch related data.
 2. Embedded (Denormalization): In the embedded method, the related data is embedded directly within the main document
-   as a nested object or array. This method is also known as denormalization and it improves query performance by
+   as a nested object or array. This method is also known as denormalization, and it improves query performance by
    reducing
    the number of queries required to fetch related data. However, it can result in data duplication and inconsistencies
    if
@@ -121,7 +121,7 @@ referencing, and two-way referencing.
    a single parent document. For example, a customer document might have multiple order documents, and each order
    document
    would contain a reference to the parent customer document.
-3. Two-way referencing: In two-way referencing, both the parent and child documents contain references to each other.
+3. **Two-way referencing**: In two-way referencing, both the parent and child documents contain references to each other.
    This is useful when you need to represent a many-to-many relationship, where multiple child documents are associated
    with multiple parent documents. For example, a user document might have multiple favorite book documents, and each
    book document would contain references to the parent user documents, creating a two-way referencing relationship.

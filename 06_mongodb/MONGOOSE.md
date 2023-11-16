@@ -79,6 +79,3 @@ that provides a flexible and scalable platform for storing and querying data. Mo
 higher-level, schema-based API for working with MongoDB, making it easier to define and interact with MongoDB documents.
 
 ***
-
-
-***

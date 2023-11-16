@@ -153,7 +153,3 @@ run().catch(console.dir);
 2. In this file we will create our first connection to the database. Use the following code:
 3. If you need info about Typescript in connection with Mongoose you can check out the following link:
     - [Mongoose Typescript](https://mongoosejs.com/docs/typescript.html)
-
-
-
-    
