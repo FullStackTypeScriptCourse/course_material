@@ -57,7 +57,7 @@ app.listen(3000, () => {
 
 ### Express base project
 
-- [Setup node project with expres and typescript](https://dev.to/cristain/how-to-set-up-typescript-with-nodejs-and-express-2023-gf)
+- [Setup node project with express and typescript](https://dev.to/cristain/how-to-set-up-typescript-with-nodejs-and-express-2023-gf)
 - Run the following commands:
 ```BASH
 mkdir node-express-typescript
@@ -161,6 +161,16 @@ npm run dev
   - Helmet helps you secure your Express apps by setting various HTTP headers.
 - [body-parser](https://www.npmjs.com/package/body-parser)
   - Node.js body parsing middleware for handling JSON, Raw, Text and URL encoded form data.
+
+### Routing
+```ts
+app.get('/example/b', (req, res, next) => {
+  console.log('the response will be sent by the next function ...')
+  next()
+}, (req, res) => {
+  res.send('Hello from B!')
+})
+```
 
 ### Read and Write files
 
