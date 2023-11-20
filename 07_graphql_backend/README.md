@@ -163,12 +163,11 @@ const resolvers = {
 - Create a resolver for each of the fields in the Query type.
 - Create a resolver for each of the fields in the Mutation type.
 - Create a resolver for each of the fields in the Subscription type.
-=======
+
 # Course day 4: Typescript 2
 
 ## Objectives
 
-- 
 
 ## How to prepare before class
 
@@ -176,7 +175,7 @@ const resolvers = {
 ## Class Exercise 1
 
 ## Class Exercise 2
->>>>>>> 2d3ffb5 (additional commit)
+
 
 ## Topic 1:
 
