@@ -30,7 +30,7 @@
 1. Create a new folder called `graphql-demo` and from inside it run `npm init -y` to create a new project and `npx tsc --init`.
 2. Install dev dependencies: `npm i -D typescript @types/node ts-node-dev nodemon rimraf`.
 3. Install the following dependencies: `npm i @apollo/server graphql express cors dotenv `. To use Apollo Server 4.
-4. Create a new file called `server.ts` inside a src folder and add the code from Step 3-6 in this guide: https://www.apollographql.com/docs/apollo-server/getting-started alternatively you can use express and apollo side by side by using this guide: https://www.apollographql.com/docs/apollo-server/migration.
+4. Create a new file called `server.ts` inside a src folder and add the code here: https://www.apollographql.com/docs/apollo-server/migration/#migrate-from-apollo-server-express. (for version 4)
 5. Create a new file called `.env` and add the following code:
 ```
 PORT=4000
@@ -46,107 +46,110 @@ PORT=4000
 ```
 6. Add the following script to your `package.json` file:
 ```json
-"dev": "nodemon src/server.ts",
+"dev": "nodemon",
 "build": "rimraf ./build && tsc",
 ```
   - The `dev` script will start the server in development mode. and the `build` script will build the project after removing the `build` folder.
 7. Run `npm run dev` and go to `http://localhost:4000/graphql` to see the GraphQL playground.
-8. Add the following code to your `server.js` file:
+8. Add the following code to a file: `graphql_schema.ts` and export it:
 ```js
-const typeDefs = gql`
-  type Query {
+  const typeDefs = `#graphql 
+type Query {
     hello: String
     users: [User]
-  }
-
-  type User {
+}
+type Mutation {
+    createUser(name: String!, email: String!, age: Int): User
+}
+type User {
     id: ID!
     name: String!
     email: String!
     age: Int
-  }
+}
 `;
-
 const users = [
-  {
-    id: '1',
-    name: 'John Doe',
-    email: '
-    age: 25,
-    },
     {
-    id: '2',
-    name: 'Jane Doe',
-    email: '
-    age: 30,
-    },
-    {
-    id: '3',
-    name: 'John Smith',
-    email: '
-    age: 35,
-    },
-];
+      id: '1',
+      name: 'John Doe',
+      email: 'john@mail.com',
+      age: 25,
+      },
+      {
+      id: '2',
+      name: 'Jane Doe',
+      email: 'jane@mail.com',
+      age: 30,
+      },
+      {
+      id: '3',
+      name: 'John Smith',
+      email: 'jonny@mail.com',
+      age: 35,
+      },
+  ];
+
+type User = {
+    id: string;
+    name: string;
+    email: string;
+    age: number;
+}; 
 
 const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-    users: () => users,
-  },
+    Query: {
+      hello: () => 'Hello world!',
+      users: () => users,
+      user: (parent, args, context, info) => {
+        return users.find((user) => user.id === args.id);
+    },
+},
+    Mutation: {
+        createUser: (_parent:never, args:User, _context:never, _info:never) => {
+          const newUser = {
+            id: String(users.length + 1),
+            name: args.name,
+            email: args.email,
+            age: args.age,
+          };
+          users.push(newUser);
+          return newUser;
+        },
+      },
 };
+export {typeDefs, resolvers };
+```
+9. Add the following code to your `server.ts` file:
+```js
+import { typeDefs, resolvers } from './schema';
 ```
 9. Run `npm run dev` and go to `http://localhost:4000/graphql` to see the GraphQL playground.
-10. Add the following code to your `server.js` file:
-```js
-const typeDefs = gql`
-  type Query {
-    hello: String
-    users: [User]
-    user(id: ID!): User
+10. In the graphql playground: Add a new operation collection called `Users` and add the following query:
+```graphql
+query {
+  users {
+    id
+    name
+    email
+    age
   }
-
-  type User {
-    id: ID!
-    name: String!
-    email: String!
-    age: Int
-  }
-`;
-
-const users = [
-  {
-    id: '1',
-    name: 'John Doe',
-    email: '
-    age: 25,
-    },
-    {
-    id: '2',
-    name: 'Jane Doe',
-    email: '
-    age: 30,
-    },
-    {
-    id: '3',
-    name: 'John Smith',
-    email: '
-    age: 35,
-    },
-];
-
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-    users: () => users,
-    user: (parent, args, context, info) => {
-      return users.find((user) => user.id === args.id);
-    },
-  },
-};
+}
 ```
-11. Run `npm run dev` and go to `http://localhost:4000/graphql` to see the GraphQL playground.
-
-
+11. In the new operation collection called `Users` add the following mutation:
+```graphql
+mutation($name: String!, $email: String!, $age: Int) {
+  createUser(name: $name, email: $email, age: $age) {
+    id
+    name
+    age
+    email
+  }
+}
+```
+With parameters:
+```json
+{ "name": "Thomas","email":"thom@mail.com", "age": 33}
+```
 ## Class Exercise 1
 - Setup a new project with the following dependencies: `apollo-server-express graphql express cors dotenv` 
 - Create a server.ts file that starts an Apollo server to serve Person objects.
@@ -164,18 +167,4 @@ const resolvers = {
 - Create a resolver for each of the fields in the Mutation type.
 - Create a resolver for each of the fields in the Subscription type.
 
-# Course day 4: Typescript 2
-
-## Objectives
-
-
-## How to prepare before class
-
-
-## Class Exercise 1
-
-## Class Exercise 2
-
-
-## Topic 1:
 
