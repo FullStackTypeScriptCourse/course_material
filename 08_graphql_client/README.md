@@ -12,7 +12,6 @@
 ## How to prepare before class
 - Watch the following video before class: https://www.youtube.com/watch?v=opeltYS_D7k&list=PLASldBPN_pkDUuOzyPotAkKmvwqyDoA0g&index=8&ab_channel=willjw3
 - Take a look at this project: https://github.com/FullStackTypeScriptCourse/graphql_simple/tree/main/client/src
-- Take a look at the documentation: https://www.apollographql.com/docs/react/get-started
+- Take a look at the documentation: https://www.apollographql.com/docs/react/get-started and https://www.apollographql.com/docs/react/data/queries plus https://www.apollographql.com/docs/react/data/mutations/
 
 ## Demo
-Take a look at the following repo: 
