@@ -20,7 +20,7 @@
 
 ## How to prepare before class
 - Read the [documentation](https://react.dev/reference/react/useContext)
-- Read this [article](https://legacy.reactjs.org/docs/composition-vs-inheritance.html)
+- Read this [article](https://www.digitalocean.com/community/tutorials/composition-vs-inheritance)
 - See this video [tutorial (especially #18-21)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI).
 
 ## 1. Composition
