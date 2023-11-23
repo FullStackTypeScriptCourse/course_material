@@ -20,11 +20,12 @@
 
 ## How to prepare before class
 - Read the [documentation](https://react.dev/reference/react/useContext)
-- Read this [article](https://www.digitalocean.com/community/tutorials/composition-vs-inheritance)
 - See this video [tutorial (especially #18-21)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI).
 
 ## 1. Composition
-Take a look at the following [article](https://legacy.reactjs.org/docs/composition-vs-inheritance.html)
+Take a look at the following: 
+- [Composition over Inheritance](https://www.digitalocean.com/community/tutorials/composition-vs-inheritance)
+- [Composition used in React](https://legacy.reactjs.org/docs/composition-vs-inheritance.html)
 
 ### Class Exercise 30 min.
 - Create a Component called Table that uses composition to get rows and headers and has props: headers and rows, where headers is a react component and rows is an array of components.
