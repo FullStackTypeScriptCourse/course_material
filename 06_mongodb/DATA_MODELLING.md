@@ -107,8 +107,8 @@ relationships should be made based on the specific requirements of the applicati
 - parent referencing
 - two-way referencing
 
-In MongoDB, there are three types of relationships that can be established between documents: child referencing, parent
-referencing, and two-way referencing.
+In MongoDB, there are three types of relationships that can be established between documents: **child referencing**, **parent
+referencing**, and **two-way referencing**.
 
 1. **Child referencing:** In child referencing, the child document contains a reference to its parent document.
    This is useful when you need to represent a one-to-many relationship, where multiple child documents are associated
