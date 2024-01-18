@@ -1,10 +1,6 @@
 # Resources
 
 # Videos
-- [Basic Setup TypeScript]()
-- [Run TypeScript]()
-- [Basic Setup Express]()
-- [Run Express]()
 
 # TypeScript Documentation
 
