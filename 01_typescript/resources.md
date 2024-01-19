@@ -7,11 +7,17 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [TypeScript Playground](https://www.typescriptlang.org/play)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [Type Declaration](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
 
 ## TypeScript Tutorials
 
 - [TypeScript Beginners Tutorial](https://www.totaltypescript.com/tutorials/beginners-typescript)
 - [TypeScript for React Developers](https://www.freecodecamp.org/news/typescript-for-react-developers/)
+
+## Type Declaration Files
+
+- [NPM](https://www.npmjs.com/~types)
+- [GitHub](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
 # Express Documentation
 

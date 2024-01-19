@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "types": [
+        "node"
+    ],
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "files": [
+    // for small projects (you can only use one of "files" or "include")
+    "index.ts",
+    "deploy.ts"
+  ],
+  "include": [
+    // include these files
+    "src/**/*"
+    // for large projects
+  ],
+  "exclude": [
+    // don't include these files
+    "node_modules",
+    "dontTouch.ts"
+  ],
+  "watchOptions": {
+  },
+  "typeAcquisition": {
+  }
+}

@@ -2,6 +2,7 @@
 
 Part 1:
 
+- TS Setup (Slides)
 - What is TypeScript? (Slides)
 - Why use TypeScript? (Slides)
 - TS functions
