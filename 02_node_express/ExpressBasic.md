@@ -1,6 +1,6 @@
 
 ### Express Project Part 1
-- Create a basic TypeScript Npm project ( See Fullstack-Moodle for details)
+- Create a basic TypeScript Npm project ( See `FullStack Guides & Resources` on Moodle for guidance)
 
 **Following packages are required:**
 ```BASH
