@@ -1,8 +1,8 @@
 ### Express Error Handling
-- you need tou have completed the `Express Basic Basic` and `Express Routes` Exercise before you can start this part.
-- before you start the exercise, read the `Èxpress Error Handling` section in the `TypeScript && Expess Resources` on Moodle.
+- ⚠ ⚠ You need tou have completed the `Express Basic Basic` and `Express Routes` Exercise before you can start this part.
+- ⚠ ⚠ Before you start the exercise, read the `Èxpress Error Handling` section in the `TypeScript && Expess Resources` on Moodle.
 
-- Error handling in Express is done through the use of middleware. The error-handling middleware is defined with four arguments: (err, req, res, next). For example:
+Error handling in Express is done through the use of middleware. The error-handling middleware is defined with four arguments: (err, req, res, next). For example:
 
 ```js
 app.use(function (err, req, res, next) {
