@@ -40,21 +40,23 @@ TS config options are set in the `tsconfig.json`
 ```json
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "outDir": "./dist",
     "strict": true,
-    "skipLibCheck": true,
-    "types": [
-      "node"
-    ]
+    "noImplicitAny": true,
+    "rootDirs": ["src"],
+    "outDir": "./dist",
+    "lib": ["es2020"],
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["node"]
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
 ```
 

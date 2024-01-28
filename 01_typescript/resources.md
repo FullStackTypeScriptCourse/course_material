@@ -19,6 +19,11 @@
 - [NPM](https://www.npmjs.com/~types)
 - [GitHub](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
+## TypeScript React
+- [React TypeScript](https://react.dev/learn/typescript)
+- [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
+- [React TypeScript DOM](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/b580df54c0819ec9df62b0835a315dd48b8594a9/types/react/index.d.ts#L1247C1-L1373)
+
 # Express Documentation
 
 - [Express](https://expressjs.com/)
@@ -31,3 +36,7 @@
 ## Express Tutorials
 
 - [Express Beginners Tutorial](https://www.freecodecamp.org/news/the-express-handbook/)
+
+## Vite Documentation
+
+- [Vite](https://vitejs.dev/)
