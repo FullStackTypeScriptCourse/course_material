@@ -20,10 +20,41 @@
 | typescript  | TypeScript                |
 | mongoose    | Orm framework for MongoDb |
 | morgan      | Logger                    |
+| nodemon     | Watcher                   |
 
-## Most common types of NPM packages
+## Most common TS types
 
 | Description | Command        |
 |-------------|----------------|
 | express     | @types/express |
 | cors        | @types/cors    |
+| dotenv      | @types/dotenv  |
+| node        | @types/node    |
+| morgan      | @types/morgan  |
+
+
+## Package.json script example
+
+```json
+{
+  "name": "node-express-typescript",
+  "version": "1.0.0",
+  "description": "Node Express TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "start:dev": "nodemon --exec ts-node server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
+```
+
+
