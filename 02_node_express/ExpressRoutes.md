@@ -34,10 +34,10 @@
       console.log(`Server is Fire at http://localhost:${port}`);
     });
 ```
-    - Understand the `morgan` and the `body-parser` middleware. What is the purpose of each middleware?
+**Understand the `morgan` and the `body-parser` middleware. What is the purpose of each middleware?**
 
 2. Add Data
-   - add a json file called persons.json to the root of the project with the following content:
+   - add a json file called `persons.json` to the root of the project with the following content:
 
 ```JSON
 [
