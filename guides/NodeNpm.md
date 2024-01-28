@@ -21,6 +21,9 @@
 | mongoose    | Orm framework for MongoDb |
 | morgan      | Logger                    |
 | nodemon     | Watcher                   |
+| body-parser | Parse request body        |
+| log4js      | Logging                   |
+| helmet      | Security                  |
 
 ## Most common TS types
 
@@ -31,7 +34,6 @@
 | dotenv      | @types/dotenv  |
 | node        | @types/node    |
 | morgan      | @types/morgan  |
-
 
 ## Package.json script example
 
@@ -49,10 +51,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-
   },
   "devDependencies": {
-
   }
 }
 ```
