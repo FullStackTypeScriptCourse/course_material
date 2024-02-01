@@ -42,14 +42,13 @@ TS config options are set in the `tsconfig.json`
   "compilerOptions": {
     "strict": true,
     "noImplicitAny": true,
-    "rootDirs": ["src"],
+    "rootDirs": ["./"],
     "outDir": "./dist",
-    "lib": ["es2020"],
+    "lib": ["es2020", "DOM"],
     "target": "es2020",
     "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "types": ["node"]
+    "esModuleInterop": true
   },
   "ts-node": {
     "esm": true,
