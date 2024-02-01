@@ -112,7 +112,7 @@
       otherwise return the function belonging to the alien.
 
 16. **instanceof** Operator Narrowing
-    - create two simple type aliases for a person and a car.
+    - create two simple objects for a person and a car.
     - create a function that takes a person or a car as a parameter. Use the **instanceof** operator to narrow the type
       of the parameter. If the parameter is a person, return the name property. If the parameter is a car, return the
       model property.
