@@ -15,12 +15,15 @@
 - GraphQL Mutations
 - GraphQL Subscriptions
 - Apollo Server
-- Apollo Client
-- Apollo Client Hooks
-- Apollo Client Cache
-- Apollo Client State
-- Apollo Client Error Handling
-- Apollo Client Pagination
+- Resolvers
+- Apollo Playground/Sandbox
+- Setup files:
+  - `server.ts`
+  - `graphql_schema.ts`
+  - `resolvers/mutations.ts`
+  - `resolvers/queries.ts`
+  - `nodemon.json`
+- TS Types vs GraphQL Types
 
 ## How to prepare before class
 - Watch the following video before class: https://www.youtube.com/watch?v=h-ZCVUAzR-0&list=PLASldBPN_pkDUuOzyPotAkKmvwqyDoA0g&ab_channel=willjw3
