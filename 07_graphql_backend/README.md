@@ -37,7 +37,6 @@
   "include": ["src/**/*.ts", "src/resolvers"],
   "exclude": ["node_modules"]
 }
-
 ```
 2. Install dev dependencies: `npm i -D typescript @types/node ts-node-dev nodemon rimraf`.
 3. Install the following dependencies: `npm i @apollo/server graphql express cors dotenv `. To use Apollo Server 4.
@@ -71,8 +70,8 @@ export { typeDefs, resolvers };
 "build": "rimraf ./build && tsc",
 ```
   - The `dev` script will start the server in development mode. and the `build` script will build the project after removing the `build` folder.
-7. Run `npm run dev` and go to `http://localhost:4000/graphql` to see the GraphQL playground.
-8. Add the following code to a file: `graphql_schema.ts` in the `src` folder and export it:
+7. Run `npm run dev` and go to `http://localhost:4000/graphql` to see the GraphQL playground. Run the query `query { hello }` to see the result.
+8. Replace the content in the file: `schema.ts` in the `src`:
 ```js
   const typeDefs = `#graphql 
 type Query {
@@ -140,10 +139,6 @@ const resolvers = {
 };
 export {typeDefs, resolvers };
 ```
-9. Add the following code to your `server.ts` file:
-```js
-import { typeDefs, resolvers } from './schema';
-```
 9. Run `npm run dev` and go to `http://localhost:4000/graphql` to see the GraphQL playground.
 10. In the graphql playground: Add a new operation collection called `Users` and add the following query:
 ```graphql
@@ -169,5 +164,5 @@ mutation($name: String!, $email: String!, $age: Int) {
 ```
 With parameters:
 ```json
-{ "name": "Thomas","email":"thom@mail.com", "age": 33}
+{ "name": "Holger","email":"holger@mail.com", "age": 33}
 ```
