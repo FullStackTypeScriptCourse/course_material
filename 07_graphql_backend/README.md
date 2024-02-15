@@ -41,7 +41,7 @@
 2. Install dev dependencies: `npm i -D typescript @types/node ts-node-dev nodemon rimraf`.
 3. Install the following dependencies: `npm i @apollo/server graphql express cors dotenv `. To use Apollo Server 4.
 4. Create a new file called `server.ts` inside a src folder and add the code here: https://www.apollographql.com/docs/apollo-server/migration/#migrate-from-apollo-server-express. (for version 4)
-5. Create a new file called `shema.ts` and add the following code:
+5. Create a new file called `schema.ts` and add the following code:
 ```js
 const typeDefs = `#graphql
     type Query {
@@ -63,7 +63,16 @@ export { typeDefs, resolvers };
   "ignore": ["node_modules/**/*"],
     "exec": "npx ts-node ./src/server.ts"
 }
+``` or use:
+```json
+{
+    "watch": ["src"],
+    "ext": "js,json,ts",
+    "ignore": ["node_modules/**/*"],
+      "exec": "tsc -p . && node dist/server.js"
+  }
 ```
+- Doing it like this requires us to import files with the `.js` extension.
 6. Add the following script to your `package.json` file:
 ```json
 "dev": "nodemon",
@@ -77,6 +86,7 @@ export { typeDefs, resolvers };
 type Query {
     hello: String
     users: [User]
+    user: User
 }
 type Mutation {
     createUser(name: String!, email: String!, age: Int): User
