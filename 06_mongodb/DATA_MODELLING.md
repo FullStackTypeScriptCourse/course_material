@@ -1,19 +1,7 @@
 # MongoDB Data Modeling & Mongoose Middleware
 
-## Links
-
-- [MongoDB Data Models](https://www.mongodb.com/docs/manual/core/data-modeling-introduction/)
-    - Chapter: Data Modeling Concepts
-    - Chapter: Data Model Examples and Patters
-    - Chapter: Data Model References
-
-- [MongoDB Atlas](https://www.mongodb.com/atlas)
-- [Learn MongoDB](http://learnmongodbthehardway.com/schema/)
-- [Mongoose Documentation](https://mongoosejs.com/)
-
 Different data models are suited to different use cases. This chapter describes some of the data model concepts and
-patterns
-that MongoDB supports, and provides examples of how to use them.
+patterns that MongoDB supports, and provides examples of how to use them.
 
 ## Types og Relationships between Data in MongoDB
 

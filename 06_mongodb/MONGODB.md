@@ -1,21 +1,5 @@
 # MongoDB
 
-**Until next class you need to have signed up for a MongoDB Atlas account. The link can be found in the `Link` section
-below.**
-
-## Links
-
-**MongoDB**
-
-- [MongoDB Atlas](https://www.mongodb.com/atlas)
-- [Learn MongoDB](http://learnmongodbthehardway.com/schema/)
-
-**Mongoose**
-
-- [Mongoose Documentation](https://mongoosejs.com/)
-
-## MongoDB
-
 MongoDB is a type of database that is designed to store and manage large volumes of unstructured or semi-structured
 data.
 Unlike traditional relational databases, which organize data into tables with strict relationships between them, MongoDB
