@@ -27,8 +27,6 @@
 
 We are going to this in order to get a better understanding of how MongoDB works and how we can use it in our projects.
 
-I will use the commandline to show you some of the commands:
-
 ```bash
     # Connect to the database
     mongo "mongodb+srv://cluster0.9qj0t.mongodb.net/<dbname>" --username <username>
