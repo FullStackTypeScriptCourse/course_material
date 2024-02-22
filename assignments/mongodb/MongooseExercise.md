@@ -4,6 +4,10 @@ Links: [Mongoose](https://mongoosejs.com/)
 
 ## Introduction
 
+Use the following structure:
+
+![img.png](img.png)
+
 In this exercise, you will be using Mongoose to create a database and perform CRUD operations on it. 
 You are going to have three different models: `Author`, `Book`, and `Library`. 
 
