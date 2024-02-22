@@ -176,3 +176,8 @@ With parameters:
 ```json
 { "name": "Holger","email":"holger@mail.com", "age": 33}
 ```
+
+## Scalar types
+[Source](https://graphql.org/learn/schema/#scalar-types)
+- Enums
+- [Dates (Custom Scalars)](https://www.apollographql.com/docs/apollo-server/schema/custom-scalars) and [here](https://the-guild.dev/graphql/tools/docs/scalars#date-as-a-scalar)
