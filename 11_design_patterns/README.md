@@ -9,6 +9,10 @@ Design patterns in javascript are a way to solve common problems in software dev
 5. **Behavioral Patterns**: Dive into behavioral patterns like Observer, Strategy, Command, and Iterator, and grasp their implementation in TypeScript to improve code maintainability and extensibility.
 6. **Implementing Patterns**: Practice implementing design patterns in TypeScript by building small-scale projects or solving coding challenges, focusing on code readability, scalability, and reusability.
 
+## SOLID principles
+- [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
+- [SOLID in React video](https://www.youtube.com/watch?v=MSq_DCRxOxw&ab_channel=CoderOne)
+
 ## Decorator pattern
 - [Decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 - Code example:
@@ -63,3 +67,5 @@ obs.subscribe(() => console.log('World'));
 obs.notify();
 ```
 
+## Demo 
+- Take a look at the authenticate decorator in the Math App.
