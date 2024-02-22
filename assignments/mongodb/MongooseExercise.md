@@ -1,6 +1,8 @@
 # Mongoose Exercise
 
-Links: [Mongoose](https://mongoosejs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Typescript Support](https://mongoosejs.com/docs/typescript.html)
+
 
 ## Introduction
 
@@ -56,6 +58,7 @@ Link: [Middleware](https://mongoosejs.com/docs/middleware.html)
 1. use the `pre` middleware to add the current date to the `createdAt` property of the all the models before saving it to the database.
 2. use the `post` middleware to populate the `books` property of the `Author` model after saving it to the database. Why? Because you want to get the full details of the books when you get the author. Also do this for the `Library` model.
 3. On the Model use a `static` method to get all the authors that have more than 2 books.
+4. Find out when and how to use the `virtual` property of the model. [Link](https://mongoosejs.com/docs/guide.html#virtuals) and then implement it in the `Author` model to get the full name of the author.
 
 Code example:
 
@@ -69,5 +72,6 @@ movieSchema.methods.addActor = function(actorId: string) {
     return this.save();
 }
 ```
+
 
 
