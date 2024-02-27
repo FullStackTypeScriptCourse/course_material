@@ -7,6 +7,8 @@
 - Understand the benefit of using signals as an alternative to react hooks.
 
 ## Agenda
+- Introduction to the react hooks
+- Introduction to react signals
 - Introduction to custom hooks
 - How to create custom hooks
 - How to use custom hooks

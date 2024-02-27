@@ -9,9 +9,23 @@ Design patterns in javascript are a way to solve common problems in software dev
 5. **Behavioral Patterns**: Dive into behavioral patterns like Observer, Strategy, Command, and Iterator, and grasp their implementation in TypeScript to improve code maintainability and extensibility.
 6. **Implementing Patterns**: Practice implementing design patterns in TypeScript by building small-scale projects or solving coding challenges, focusing on code readability, scalability, and reusability.
 
+## Agenda
+- Catch up from last
+  - How to use mongoose in our graphql resolvers.
+  - GraphQL quiz
+
+- Design patterns
+  - Creational patterns
+  - Structural patterns
+  - Behavioral patterns
 ## SOLID principles
 - [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
 - [SOLID in React video](https://www.youtube.com/watch?v=MSq_DCRxOxw&ab_channel=CoderOne)
+  - Single Responsibility Principle: A class should have only one reason to change.
+  - Open/Closed Principle: A class should be open for extension but closed for modification.
+  - Liskov Substitution Principle: Objects of a superclass should be replaceable with objects of its subclasses without affecting the functionality of the program. [Article](https://reflectoring.io/lsp-explained/)
+  - Interface Segregation Principle: A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.
+  - Dependency Inversion Principle: High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
 
 ## Decorator pattern
 - [Decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
