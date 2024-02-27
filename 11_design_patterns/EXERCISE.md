@@ -76,4 +76,4 @@ class TaskManager {
 **Additional Considerations:**
 - Focus on code quality, readability, and maintainability.
 - Break down the project into manageable tasks and allocate time for each task accordingly.
-- This assignment is designed to be completed within 8 hours, but you may adjust the scope or timeline as needed based on your preferences and constraints.
+- This assignment is designed to be completed within 14 hours, but you may adjust the scope or timeline as needed based on your preferences and constraints.
